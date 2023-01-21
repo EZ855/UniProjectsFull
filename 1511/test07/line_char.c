@@ -1,0 +1,17 @@
+// z5383657
+// Evan Zhang
+// 21/07/2021
+
+#include <stdio.h>
+
+int main (void) {
+    
+    char word[256] = {0};
+    fgets(word, 256, stdin);
+    
+    int i = 0;
+    scanf("%d", &i);
+    printf("The character in position %d is '%c'\n", i, word[i]);
+
+    return 0;
+}

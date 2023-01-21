@@ -1,0 +1,116 @@
+// Extract the 3 parts of a float using bit operations only
+
+#include <stdio.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <assert.h>
+
+#include "floats.h"
+
+// separate out the 3 components of a float
+float_components_t float_bits(uint32_t f) {
+    uint32_t flt = f;
+    
+    uint32_t sgn = (flt >> 31) & 0x1;
+    uint32_t exp = (flt >> 23) & 0xFF;
+    uint32_t frc = (flt) & 0x7FFFFF;
+    
+    float_components_t struc;
+    
+    struc.sign = sgn;
+    struc.exponent = exp;
+    struc.fraction = frc;
+    
+    return struc;
+    
+    
+}
+
+// given the 3 components of a float
+// return 1 if it is NaN, 0 otherwise
+int is_nan(float_components_t f) {
+
+    uint32_t exponent = f.exponent;
+    uint32_t fraction = f.fraction;
+    if (exponent == 0xFF) {
+        if (fraction != 0x000000) {
+            return 1;
+        }
+        else {
+            return 0;
+        }
+    }
+    else {
+        return 0;
+    }
+    
+}
+
+// given the 3 components of a float
+// return 1 if it is inf, 0 otherwise
+int is_positive_infinity(float_components_t f) {
+
+    uint32_t sign = f.sign;
+    uint32_t exponent = f.exponent;
+    uint32_t fraction = f.fraction;
+    if (sign == 0x0) {
+        if (exponent == 0xFF) {
+            if (fraction == 0x000000) {
+                return 1;
+            }
+            else {
+                return 0;
+            }
+        }
+        else {
+            return 0;
+        }
+    }
+    else {
+        return 0;
+    }
+}
+
+// given the 3 components of a float
+// return 1 if it is -inf, 0 otherwise
+int is_negative_infinity(float_components_t f) {
+
+    uint32_t sign = f.sign;
+    uint32_t exponent = f.exponent;
+    uint32_t fraction = f.fraction;
+    if (sign == 0x1) {
+        if (exponent == 0xFF) {
+            if (fraction == 0x000000) {
+                return 1;
+            }
+            else {
+                return 0;
+            }
+        }
+        else {
+            return 0;
+        }
+    }
+    else {
+        return 0;
+    }
+}
+
+// given the 3 components of a float
+// return 1 if it is 0 or -0, 0 otherwise
+int is_zero(float_components_t f) {
+
+    uint32_t exponent = f.exponent;
+    uint32_t fraction = f.fraction;
+    if (exponent == 0x00) {
+        if (fraction == 0x000000) {
+            return 1;
+        }
+        else {
+            return 0;
+        }
+    }
+    else {
+        return 0;
+    }
+}

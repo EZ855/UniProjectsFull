@@ -1,0 +1,8 @@
+Question 2
+
+Explain why the compilation error occurred and briefly describe how it
+can be fixed.
+
+Since the current program is using a graph ADT, it doesn't have access to what the structure
+of 'g' actually is. Instead, they should be using a provided function in the header file "Graph.h" (e.g.
+an insert edge function).

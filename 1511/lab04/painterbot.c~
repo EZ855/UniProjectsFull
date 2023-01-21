@@ -1,0 +1,31 @@
+// z5383657
+// Evan Zhang 
+// 28/06/2021
+
+#include <stdio.h>
+
+#define ARRAY_NUMBER 36
+
+int main (void) {
+    
+    int array[ARRAY_NUMBER] = {0};
+    int scanned_in_value;
+    int scan_status = scanf("%d", &scanned_in_value);
+    if (scan_status == 1) {
+        array[scanned_in_value] = 1;
+    }
+    while (scan_status == 1) {
+        scan_status = scanf("%d", &scanned_in_value);
+        if (scan_status ==1) {
+            array[scanned_in_value] = 1;
+        }
+    }
+    
+    int loop_counter = 0;
+    while (ARRAY_NUMBER > loop_counter) {
+        printf("%d ", array[loop_counter]);
+        loop_counter++;
+    }
+    printf("\n");
+    return 0;
+}

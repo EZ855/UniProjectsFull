@@ -1,0 +1,55 @@
+PING www.uq.edu.au (130.102.184.3) 1472(1500) bytes of data.
+1480 bytes from research-integrity.uq.edu.au (130.102.184.3): icmp_seq=1 ttl=239 time=18.1 ms
+1480 bytes from tasq.uq.edu.au (130.102.184.3): icmp_seq=2 ttl=239 time=17.8 ms
+1480 bytes from accommodation.uq.edu.au (130.102.184.3): icmp_seq=3 ttl=239 time=17.9 ms
+1480 bytes from desk-book.app.uq.edu.au (130.102.184.3): icmp_seq=4 ttl=239 time=17.9 ms
+1480 bytes from student-strategy.uq.edu.au (130.102.184.3): icmp_seq=5 ttl=239 time=18.1 ms
+1480 bytes from sss.uq.edu.au (130.102.184.3): icmp_seq=6 ttl=239 time=17.9 ms
+1480 bytes from shorthand.uq.edu.au (130.102.184.3): icmp_seq=7 ttl=239 time=17.9 ms
+1480 bytes from www.uqccr.uq.edu.au (130.102.184.3): icmp_seq=8 ttl=239 time=18.1 ms
+1480 bytes from www.hr.uq.edu.au (130.102.184.3): icmp_seq=9 ttl=239 time=18.1 ms
+1480 bytes from cnrc.centre.uq.edu.au (130.102.184.3): icmp_seq=10 ttl=239 time=17.8 ms
+1480 bytes from coh.centre.uq.edu.au (130.102.184.3): icmp_seq=11 ttl=239 time=18.0 ms
+1480 bytes from www.rdsi.uq.edu.au (130.102.184.3): icmp_seq=12 ttl=239 time=18.2 ms
+1480 bytes from genomics.uq.edu.au (130.102.184.3): icmp_seq=13 ttl=239 time=18.2 ms
+1480 bytes from www.cai.uq.edu.au (130.102.184.3): icmp_seq=14 ttl=239 time=18.2 ms
+1480 bytes from www.uqconnect.edu.au (130.102.184.3): icmp_seq=15 ttl=239 time=18.2 ms
+1480 bytes from cysar.centre.uq.edu.au (130.102.184.3): icmp_seq=16 ttl=239 time=18.2 ms
+1480 bytes from election-ad-data.uq.edu.au (130.102.184.3): icmp_seq=17 ttl=239 time=18.3 ms
+1480 bytes from www.laf.uq.edu.au (130.102.184.3): icmp_seq=18 ttl=239 time=18.2 ms
+1480 bytes from universityofqueensland.au (130.102.184.3): icmp_seq=19 ttl=239 time=18.0 ms
+1480 bytes from artificial-intelligence.uq.edu.au (130.102.184.3): icmp_seq=20 ttl=239 time=18.3 ms
+1480 bytes from www.biological-resources.app.uq.edu.au (130.102.184.3): icmp_seq=21 ttl=239 time=18.0 ms
+1480 bytes from www.uqx.edu.au (130.102.184.3): icmp_seq=22 ttl=239 time=18.0 ms
+1480 bytes from dzhu.test.uq.edu.au (130.102.184.3): icmp_seq=23 ttl=239 time=18.2 ms
+1480 bytes from www.student.uq.edu.au (130.102.184.3): icmp_seq=24 ttl=239 time=18.0 ms
+1480 bytes from queenslanduniversity.au (130.102.184.3): icmp_seq=25 ttl=239 time=17.8 ms
+1480 bytes from jobs.uq.edu.au (130.102.184.3): icmp_seq=26 ttl=239 time=18.1 ms
+1480 bytes from media-summary.uq.edu.au (130.102.184.3): icmp_seq=27 ttl=239 time=18.3 ms
+1480 bytes from shrs.uq.edu.au (130.102.184.3): icmp_seq=28 ttl=239 time=18.1 ms
+1480 bytes from createhistory.law.uq.edu.au (130.102.184.3): icmp_seq=29 ttl=239 time=18.2 ms
+1480 bytes from choose.uq.edu.au (130.102.184.3): icmp_seq=30 ttl=239 time=18.1 ms
+1480 bytes from www.integrity-investigations.uq.edu.au (130.102.184.3): icmp_seq=31 ttl=239 time=18.3 ms
+1480 bytes from cg.app.uq.edu.au (130.102.184.3): icmp_seq=32 ttl=239 time=18.2 ms
+1480 bytes from pef.uq.edu.au (130.102.184.3): icmp_seq=33 ttl=239 time=18.2 ms
+1480 bytes from ergo.app.uq.edu.au (130.102.184.3): icmp_seq=34 ttl=239 time=18.3 ms
+1480 bytes from www.cmvh.uq.edu.au (130.102.184.3): icmp_seq=35 ttl=239 time=18.1 ms
+1480 bytes from ctp.uq.edu.au (130.102.184.3): icmp_seq=36 ttl=239 time=18.3 ms
+1480 bytes from www.my.uq.edu.au (130.102.184.3): icmp_seq=37 ttl=239 time=18.1 ms
+1480 bytes from btccrc.centre.uq.edu.au (130.102.184.3): icmp_seq=38 ttl=239 time=17.9 ms
+1480 bytes from ergo.app.uq.edu.au (130.102.184.3): icmp_seq=39 ttl=239 time=18.0 ms
+1480 bytes from soss.uq.edu.au (130.102.184.3): icmp_seq=40 ttl=239 time=18.2 ms
+1480 bytes from hearhelp.project.uq.edu.au (130.102.184.3): icmp_seq=41 ttl=239 time=18.2 ms
+1480 bytes from static.uq.net.au (130.102.184.3): icmp_seq=42 ttl=239 time=18.0 ms
+1480 bytes from minderoo.centre.uq.edu.au (130.102.184.3): icmp_seq=43 ttl=239 time=18.2 ms
+1480 bytes from www.brc.uq.edu.au (130.102.184.3): icmp_seq=44 ttl=239 time=18.3 ms
+1480 bytes from www.cai.uq.edu.au (130.102.184.3): icmp_seq=45 ttl=239 time=18.2 ms
+1480 bytes from www.uqx.uq.edu.au (130.102.184.3): icmp_seq=46 ttl=239 time=18.3 ms
+1480 bytes from staff.crcmining.com.au (130.102.184.3): icmp_seq=47 ttl=239 time=18.1 ms
+1480 bytes from dzhu.test.uq.edu.au (130.102.184.3): icmp_seq=48 ttl=239 time=18.4 ms
+1480 bytes from cg.app.uq.edu.au (130.102.184.3): icmp_seq=49 ttl=239 time=18.0 ms
+1480 bytes from election-ad-data.uq.edu.au (130.102.184.3): icmp_seq=50 ttl=239 time=19.2 ms
+
+--- www.uq.edu.au ping statistics ---
+50 packets transmitted, 50 received, 0% packet loss, time 49083ms
+rtt min/avg/max/mdev = 17.759/18.131/19.195/0.211 ms

@@ -1,0 +1,18 @@
+#items = 0
+Items:
+#items = 1
+Items: (v: 1, w: 0, weight: 5.00)
+#items = 2
+Items: (v: 2, w: 0, weight: 4.00) (v: 1, w: 0, weight: 5.00)
+Graph:
+Number of vertices: 3
+Number of edges: 3
+Edge 0 - 1: 5.000000
+Edge 0 - 2: 4.000000
+Edge 1 - 2: 3.000000
+
+Minimum Spanning Tree:
+Number of vertices: 3
+Number of edges: 2
+Edge 0 - 1: 5.000000
+Edge 0 - 2: 4.000000

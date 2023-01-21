@@ -1,0 +1,6 @@
+Exercise 1:
+1. Max size is 100. Drops back down to 0 because of packet time out. Ramps back up to half (~50) before going back to linear increase. This is because the congestion window has been estimated.
+
+2. The average throughput is around 180 packets/s. Each packet transmits 460 bytes. Therefore average throughput is around 460 * 180 = 82,800bps
+
+3. 

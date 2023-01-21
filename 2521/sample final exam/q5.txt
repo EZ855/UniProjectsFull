@@ -1,0 +1,15 @@
+Question 5
+
+(a) What is the difference between an Euler path and a Hamilton path?
+Hamiltonian path is a simple path connecting all vertices once.
+Euler path is a simple path utilising all edges once.
+
+
+(b) Does the graph have any Euler paths? If so, give one of them. If not, explain why.
+no, as there is only one vertex with an odd degree
+
+
+(c) Does the graph have any Hamilton paths? If so, give one of them. If not, explain why.
+yes, 0, 1, 2, 3.
+
+

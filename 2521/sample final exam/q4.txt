@@ -1,0 +1,22 @@
+Question 4
+
+(a) How many words are stored in this trie?
+11
+
+
+(b) Which nodes would be visited in searching for "deeds"?
+only the 'd' node in the first level.
+Children nodes are accessed via the letters (e.g. node.child[c], where c is a character in the word
+being searched) so therefore when a node.child[e] is found to not exist, the search terminates.
+
+
+(c) What new nodes would be created if the word "bogus" was added to the trie?
+    Justify your answer.
+    'u' and 's' underneath 'bog'
+
+
+(d) What new nodes would be created if the word "do" was added to the trie?
+    Justify your answer.
+    no new nodes, the 'o' node would be marked as an ending node.
+
+

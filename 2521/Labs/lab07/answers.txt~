@@ -1,0 +1,26 @@
+
+NOTE:
+- Your time complexities should be expressed in big-O notation and be in
+  terms of n, where n is the number of cells in the maze.
+
+============
+  solveBfs
+============
+
+- Worst case time complexity: O(n)
+
+- Explanation: Worst case is every cell not a wall and is checked and marked as path to exit.
+               All functions that are called at each cell run at O(1) speed (QueueEnqueue/Dequeue,
+               MazeIsWall(?), MazeVisit(?)).
+               Additionally, freeing helper queue and matrix functions run at O(n) speed.
+
+============
+  solveDfs
+============
+
+- Worst case time complexity: O(n)
+
+- Explanation: Same reasoning as solveBfs except replace queue functions with stack
+               functions (StackPop/Push run at O(1) speed, similar to
+               QueueEnqueue/Dequeue).
+

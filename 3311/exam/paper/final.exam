@@ -1,0 +1,861 @@
+<exam>
+COMP3311:Final Exam 22T3:Database Systems
+:Friday 25 November, 2022::3:9:51
+
+<notes>Front Page
+<center>
+<p class="red">
+Read <b>all</b> of the instructions below before commencing.
+<br>You will need to scroll until <i>End of Notes</i> to see everything 
+</p>
+</center>
+<div style="margin:50px 100px;">
+<b>About the Exam duration</b>:
+<ul>
+<li> you have 3 hours to complete the exam, plus 10 mins reading time
+<li> any submissions after the end of the exam will not be marked
+</ul>
+<p>
+<b>About this Exam web-site:</b>
+<ul>
+<li> The Instructions and the Questions use one browser tab
+<li> Each documentation manual has its own tab
+<li> The tab will be created the first time you access the manual
+<li> You can use the tabs to navigate to the manuals once<br>
+	 they're open, without losing your place in the questions
+</ul>
+<b>Start-of-Exam Instructions:</b>
+<ul>
+<li> Details are in the <a target="_b" href="../index.html">Instructions Page</a>
+</ul>
+<b>General Instructions:</b>
+<ul>
+<li> Answer <b>all</b> questions.
+<li> Questions are not worth equal marks.
+<li> Questions may be answered in any order.
+<li> During the Exam ...
+<ul>
+<li> you must <b>not</b> communicate with other students in <em>any</em> way
+<li> you must <b>not</b> request/receive help from contract cheating sites (e.g. Chegg)
+</ul>
+<li> All questions must be submitted using <tt>give</tt> or Webcms3
+<li> Submit each question as you finish it
+<li> You can submit questions multiple times
+<li> <em>Do not</em> leave submissions to the last minute
+<li> Each question has instructions on what needs to be submitted
+</ul>
+<b>End-of-Exam <b>Instructions:</b></b>
+<ul>
+<li> Stop working on questions
+<li> Check that you submitted all of your answers
+<li> Relax ... COMP3311 is done and dusted
+</ul>
+</ul>
+<p>
+If you believe that insufficient information has been provided to answer <br>
+a given question, then you should write any assumptions that you think are <br>
+necessary to complete the question and continue work from there. If the <br>
+assumptions are reasonable, you can still obtain full marks for the question.
+</p>
+<p>
+Note that marks are awarded for your working, not just for getting the <br>
+correct final answer. If you get an incorrect final answer in one part of<br>
+a question and use it in a later part of that question, it is still possible <br>
+to achieve full marks for the later part if all working is correct.
+</p>
+<p>
+For the programming questions, you can only receive full marks for a
+<br> correctly-working program that loads/executes with no warnings. In all
+<br> other cases, you receive partial-marks based on how close the program
+<br> is to being correct. Submitting the supplied template is worth zero marks.
+</p>
+</div>
+</notes>
+
+<notes>Notes
+<p>
+These notes describe the environment available to you in this exam.
+Reading them carefully could potentially save you much time in completing
+the questions.
+</p>
+<p>
+When you unzip the <tt>exam-work.zip</tt> file,
+the following files will be copied to your working directory:
+</p>
+<center>
+<table cellspacing="0" cellpadding="5" border="1">
+<tr>
+<td><b>File</b></td>
+<td><b>Contents</b></td>
+</tr>
+<tr>
+<td><tt>racing.dump</tt></td>
+<td>An PostgreSQL dump of database about horse racing</td>
+</tr>
+<tr>
+<td><tt>q1/q1.sql</tt></td>
+<td>SQL view template for Question 1 (prac)</td>
+</tr>
+<tr>
+<td><tt>q2/q2.sql</tt></td>
+<td>SQL view template for Question 2 (prac)</td>
+</tr>
+<tr>
+<td><tt>q3/q3.sql</tt></td>
+<td>Template for SQL function for Question 3 (prac)</td>
+</tr>
+<tr>
+<td><tt>q4/q4.sql</tt></td>
+<td>Template for PLpgSQL function for Question 4 (prac)</td>
+</tr>
+<tr>
+<td><tt>q5/q5.sql</tt></td>
+<td>Template for helper views and functions for Question 5 (prac)</td>
+</tr>
+<tr>
+<td><tt>q5/q5</tt></td>
+<td>Template Python script for Question 5 (prac)</td>
+</tr>
+<tr>
+<td><tt>q6.txt</tt></td>
+<td>Template for ??? in Question 6 (written)</td>
+</tr>
+<tr>
+<td><tt>q7.txt</tt></td>
+<td>Template for ??? in Question 7 (written)</td>
+</tr>
+<tr>
+<td><tt>q8.txt</tt></td>
+<td>Template for ??? in Question 8 (written)</td>
+</tr>
+<tr>
+<td><tt>q9.txt</tt></td>
+<td>Template for ??? in Question 9 (written)</td>
+</tr>
+</table>
+</center>
+<p>
+The <tt>q<i>X</i>.sql</tt>, <tt>q<i>X</I></tt> (Python scripts)
+ and <tt>q<i>X</i>.txt</tt> are provided to
+save you some typing. Files with a <tt>sql</tt> suffix are part of
+the practical component of this exam and you should test that the code
+in them works before submitting.
+Similary for the Python script in Q5.
+Files with a <tt>.txt</tt> suffix are part of the written component of
+the exam, and, even if they contain code, do not require testing before
+submission. Of course, you should read them carefully before submitting.
+</p>
+<p>
+Each prac question has its own directory, and each of these contains,
+along with the template file:
+</p>
+<center>
+<table cellspacing="0" cellpadding="5" border="1">
+<tr>
+<td><b>File</b></td>
+<td><b>Contents</b></td>
+</tr>
+<tr>
+<td><tt>tests/</tt></td>
+<td>A directory containing test cases for your view/function/script
+</tr>
+<tr>
+<td><tt>check</tt></td>
+<td>A shell script to run the tests</td>
+</tr>
+<tr>
+<td><tt>tests/*.sh</tt></td>
+<td>Small scripts to run each test</td>
+</tr>
+<tr>
+<td><tt>tests/*.expected</tt></td>
+<td>Expected outputs for each of the tests</td>
+</tr>
+</table>
+</center>
+<p>
+Note that each of the tests directories contains an
+empty file
+called <tt>00.expected</tt>. Do not remove this file.
+</p>
+<p>
+If you accidentally remove any of the above files,
+you can get a fresh copy via the command:
+</p>
+<pre>
+unzip exam-work.zip <i>fileName</i>
+</pre>
+<p>
+This command will ask before overwriting any existing copy
+of a file called <tt><i>fileName</i></tt>.
+</p>
+<p>
+Be careful not to remove other files. You cannot restore them.
+It is a useful strategy to submit your work every so often.
+You are allowed to make multiple submissions; only the latest
+one will be marked.
+</p>
+<p>
+Each <tt>check</tt> script will create other files in the
+<tt>tests</tt> directory when it runs its tests.
+You can examine these to help with debugging.
+</p>
+</notes>
+
+<notes>Database
+<p>
+The database for the exam is concerned with horse racing.
+It contains information about race-courses, horses,
+jockeys, races, race meetings, etc.
+The following ER design gives an overview of this database:
+<center>
+<img src="Pics/racing-schema.png">
+</center>
+<p>
+Note that we did not include attributes in the above diagram;
+the goal is simply to show the relationships.
+The SQL schema below gives all of the implementation details.
+</p>
+<p>
+Notes on the schema:
+</p>
+<ul>
+<li> all tables have a unique integer primary key called <tt>id</tt>
+<li> a race meeting is a sequence of races held at a particular racecourse on a particular day
+<li> the order that races are run at a meeting is given by the <tt>ord</tt> attribute
+<li> the races may be "special" (have their own name), or are simply "Race 1", "Race 2", etc
+<li> races are often referred to as "Group 1", etc; this is represented by the <tt>level</tt> attribute
+<li> horse "genders" are Stallion, Gelding, Mare, Filly
+<li> all ages and genders of horses can run in all races
+<li> a race consists of a number of horses each of which is ridden by a jockey
+<li> horses finish the race in a particular order; there are no ties
+<li> the <tt>finished</tt> attribute gives the finishing order; 1 means finished first
+</ul>
+<pre>
+create table Horses (
+	id          integer,
+	name        text not null unique,
+	gender      char(1) not null check (gender in ('S','G','M','F')),
+	age         integer not null check (age between 2 and 8),
+	primary key (id)
+);
+
+create table Jockeys (
+	id          integer,
+	name        text not null unique,
+	gender      char(1),
+	primary key (id)
+);
+
+create table RaceCourses (
+	id          integer,
+	name        text not null unique,
+	city        text not null,
+	primary key (id)
+);
+
+create table Meetings (
+	id          integer,
+	run_on      date not null,
+	run_at      integer not null references RaceCourses(id),
+	primary key (id)
+);
+
+create table Races (
+	id          integer,
+	name        text not null,
+	ord         integer not null check (ord between 1 and 15),
+	level       integer not null check (level between 1 and 4),
+	prize       integer not null check (prize >= 1000),
+	length      integer not null check (length >= 1000),
+	part_of     integer not null references Meetings(id),
+	primary key (id)
+);
+
+create table Runners (
+	id          integer,
+	horse       integer not null references Horses(id),
+	race        integer not null references Races(id),
+	jockey      integer not null references Jockeys(id),
+	finished    integer check (finished > 0),
+	primary key (id)
+);
+	
+</pre>
+<p>
+The data is available in:
+</p>
+<pre>
+~cs3311/web/22T3/exams/22T3/work/racing.dump
+</pre>
+<p>
+It is also included in the <tt>exam-work.zip</tt> file.
+<p>
+You should familiarise yourself with the schema
+before proceeding to solve the queries.
+It would also be useful to examine the database contents to ensure
+that you understand what all of the data represents.
+</p>
+<p>
+You can create the database by running the commands
+</p>
+<pre>
+createdb racing
+psql racing -f racing.dump
+</pre>
+<p>
+The above assumes that
+<ul>
+<li> you are logged into a host with a PostgreSQL server (e.g. <tt>db2</tt>)
+<li> the PostgreSQL server is actually running
+<li> you are in a directory containing the dump file
+</p>
+</notes>
+
+<link>Course Website|https://webcms3.cse.unsw.edu.au/COMP3311/22T3/
+
+<link>Cheat Sheets|doco/index.html
+
+
+<question> 3 marks
+<p>
+Write an <b>SQL view</b> that finds the horse (or horses) that have won the 
+most Group 1 races.
+</p>
+<p>
+Races are categorized into "groups". Group 1 races are the top level,
+most prestigious races. Then there are Group 2, Group 3 and Group 4 races.
+The Group of a race is indicated by the <tt>Races.level</tt> attribute.
+The position that a horse finishes in a race is indicated by the
+<tt>Runners.finished</tt> field, with a value of 1 meaning finished
+first.
+<p>
+Define the view as <tt>qQQ(horse)</tt>.
+</p>
+<p>
+The expected result is:
+</p>
+<pre>
+racing=# <b>select * from q1;</b>
+   horse    
+------------
+ Brown Jack
+(1 row)
+</pre>
+<p>
+Note that a "solution" which does something like &nbsp;
+"<tt>select 'Brown Jack' as horse</tt>" &nbsp;
+is worth zero marks.
+<p> <b>Instructions:</b> </p>
+<ul>
+<li> Work on this question in the <tt>work/qQQ/</tt> directory
+<li> Define the <tt>qQQ</tt> view in the <tt>qQQ.sql</tt> file
+<li> Also, place any additional views used by <tt>qQQ</tt> in this file
+<li> Additional views must be placed <i>before</i> the <tt>qQQ</tt> definition
+<li> You may <em>not</em> use functions in answering this question, just views
+<li> Load it into your database using: &nbsp; <tt>psql racing -f qQQ.sql</tt>
+<li> Sample output is in the file: &nbsp; <tt>tests/01.expected</tt>
+<li> Test it via: &nbsp; <tt>select * from qQQ;</tt>
+<li> Check it using: &nbsp; <tt>sh check</tt> &nbsp; in the <tt>qQQ</tt> directory
+<li> Submit it using: &nbsp; <tt>give cs3311 exam_qQQ qQQ.sql</tt> &nbsp;or&nbsp; Webcms3
+</ul>
+</question>
+
+
+<question> 4 marks
+<p>
+Write an <b>SQL view</b> that finds race that only have mares running in them.
+</p>
+<p>
+Horse genders are different to human genders.
+One horse gender is "mare" (represented by a value of 'M' in the
+<tt>Horses.gender</tt> attribute).
+We are interested in races where all of the horses have this gender.
+</p>
+<p>
+The result tuples should contain the name of the race, the racecourse
+where it was run, and the date it was run.
+</p>
+<p>
+Define the view as <tt>qQQ(name,course,date)</tt>.
+</p>
+<p>
+The expected result:
+</p>
+<pre>
+racing=# <b>select * from q2 order by name;</b>
+         name         |   course   |    date    
+----------------------+------------+------------
+ Blue Sapphire Stakes | Caulfield  | 2019-10-16
+ Caulfield Cup        | Caulfield  | 2019-10-19
+ Race 2               | Rosehill   | 2019-11-09
+ Race 2               | Rosehill   | 2020-03-21
+ Race 3               | Doomben    | 2020-06-13
+ Race 3               | Flemington | 2019-11-07
+(6 rows)
+</pre>
+<p> <b>Instructions:</b> </p>
+<ul>
+<li> Work on this question in the <tt>work/qQQ/</tt> directory
+<li> Define the view <tt>qQQ</tt> in the file <tt>qQQ.sql</tt>
+<li> Also, place any additional views used by <tt>qQQ</tt> in this file
+<li> You may <em>not</em> use functions in answering this question, just views
+<li> Additional views must be placed <i>before</i> the <tt>qQQ</tt> definition
+<li> Load it into your database using: &nbsp; <tt>psql racing -f qQQ.sql</tt>
+<li> Sample output is in the file: &nbsp; <tt>tests/01.expected</tt>
+<li> Test it via: &nbsp; <tt>select * from qQQ;</tt>
+<li> Check it using: &nbsp; <tt>sh check</tt> &nbsp; in the <tt>qQQ</tt> directory
+<li> Submit it using: &nbsp; <tt>give cs3311 exam_qQQ qQQ.sql</tt> &nbsp;or&nbsp; Webcms3
+</ul>
+</question>
+
+
+<question> 5 marks
+<p style="color:red">You will need to change the name of the database from "property"
+to "racing" in the "check" script before the checking will work properly.
+</p>
+<p>
+Write an <b>SQL function</b> that prints a summary of horses' gender
+and age for a given type of race.
+</p>
+<p>
+We want to represent information about each horse by its single
+character <tt>gender</tt> value and its single digit age value.
+For example <tt>M5</tt> represents a 5-year-old mare and <tt>F2</tt>
+represents a 2-year-old filly.
+</p>
+<p>
+For each race, we want to give a comma-separated list of horse
+gender/age entries. The list should be ordered by gender, and then
+by age. For more detail on what these lists look like, see the
+example below, or the expected
+outputs in the <tt>tests</tt> directory.
+</p>
+<p>
+We identify races by their "type", which typically appears as the
+last word in their name. For example, the "Melbourne Cup" has type "Cup",
+and the "Cox Plate" race has type "Plate". Many races have type "Stakes".
+The function should include any races whose name ends in the value
+given as the function argument. Name matching is case-sensitive.
+</p>
+<p>
+The function returns tuples of type <tt>race_horses</tt>, which
+consist of two text strings: one for the name of the race, the
+other for the list of gender/age entries for the runners in that race.
+</p>
+<p>
+Note that from within the function, you can refer to the <tt>text</tt>
+parameter using the notation <tt>$1</tt>.
+</p>
+<p>
+The <tt>race_horses</tt> type will be created each time you load
+the <tt>q3.sql</tt> file into the database. Each time, it gives
+a <tt>NOTICE</tt>; this is <em>not</em> an error message.
+</p>
+<p>
+Define the function as &nbsp; function <tt>qQQ(text) returns race_horses ... </tt>
+</p>
+<p>
+Remember that it is an SQL function, <em>not</em> a PLpgSQL function.
+</p>
+<p>
+An example of usage:
+</p>
+<pre>
+racing=# <b>select * from q3('Plate') order by race;</b>
+              race              |         horses          
+--------------------------------+-------------------------
+ Breeders' Plate                | F2,F3,F3,M3,M5
+ Craven Plate                   | F4,F4,F5,G3,M3,M4,M5,S4
+ Frank Packer Plate             | F3,F3,G3,G3,M3,M4
+ Japan Racing Association Plate | F3,F3,F4,F4,F4,M2,M3,M3
+ Maribyrnong Plate              | F4,F4,G3,M3,M4,M4
+ Oakleigh Plate                 | F3,F4,F4,G3,M3,M4
+ Rough Habit Plate              | F3,F3,F3,F4,G3,M3,M4,M4
+ Vo Rogue Plate                 | F3,F3,F4,F5,G4,M2,M4,S5
+ W. S. Cox Plate                | F2,F4,G3,M4,M4,M4,M5,S4
+(9 rows)
+</pre>
+
+<p> <b>Instructions:</b> </p>
+<ul>
+<li> Work on this question in the <tt>work/qQQ/</tt> directory
+<li> Define a function <tt>qQQ(text)</tt> in the file <tt>qQQ.sql</tt>
+<li> Also, place any additional views used by <tt>qQQ</tt> in this file
+<li> Additional views must be placed <i>before</i> the <tt>qQQ</tt> definition
+<li> Load it into your database using: &nbsp; <tt>psql racing -f qQQ.sql</tt>
+<li> Sample output is in the file: &nbsp; <tt>tests/01.expected</tt>
+<li> Test it via: &nbsp; <tt>select * from qQQ(...);</tt>
+<li> Check it using: &nbsp; <tt>sh check</tt> &nbsp; in the <tt>qQQ</tt> directory
+<li> Submit it using: &nbsp; <tt>give cs3311 exam_qQQ qQQ.sql</tt> &nbsp;or&nbsp; Webcms3
+</ul>
+</question>
+
+<question> 4 marks
+<p>
+Write a <b>PLpgSQL function</b> that gives the average winnings for
+horses given by a partial name.
+</p>
+<p>
+The average winnings for a horse is defined as <i>T/R</i>, where
+</p>
+<ul>
+<li> <i>T</i> = total of prize pools from races that the horse won
+<li> <i>R</i> = the number of races that the horse has run in
+</ul>
+<p>
+Note that we are not using the 70:20:10 split of prize pool
+like in Q5.
+In this question, if a horse wins, it takes the entire prize pool.
+If it does not win, it gets nothing.
+For example, the horse called "Eddie" ran in 14 races, and won two
+of them for total winnings of 150000&nbsp;+&nbsp;160000&nbsp;=&nbsp;310000.
+Eddie's average winnings would thus be 310000/14&nbsp;=&nbsp;22142.
+</p>
+<p>
+The function returns tuples of type <tt>horse_winnings</tt>, which
+consist of two attributes: one for the name of the horse, the
+other for the integer value of their average winnings.
+You can assume that no horse in the database has run in no races
+(i.e no horse has <i>R</i> = 0).
+</p>
+<p>
+The function returns one tuple for each horse whose name matches
+the partial name given as the function parameter.
+Matching should be case-insensitive against <tt>Horses.name</tt>.
+If there are no matching horses, return an empty table.
+<p>
+The <tt>horse_winnings</tt> type will be created each time you load
+the <tt>q4.sql</tt> file into the database. Each time, it gives
+a <tt>NOTICE</tt>; this is <em>not</em> an error message.
+</p>
+<p>
+Define the function as &nbsp; function <tt>qQQ(part_name text) returns setof horse_winnings ... </tt>
+</p>
+<p>
+An example of usage is below. There are more examples in the <tt>tests</tt>
+directory.
+</p>
+<pre>
+racing=# <b>select * from q4('Eddie');</b>
+ horse | average 
+-------+---------
+ Eddie |   22142
+(1 row)
+
+racing=# <b>select * from q4('neigh') order by horse;</b>
+           horse           | average 
+---------------------------+---------
+ Always Neighing           |   11133
+ Arnold Schwarze-neigh-ger |   27052
+ Hay Neighbor              |   75000
+ Hermoineigh               |    8947
+ Liam Neighson             |  108538
+ Neigh Sayer               |   77538
+ NeighNeigh Leaks          |   65000
+ Ron Neighsly              |     833
+ Sir Neighs Alot           |   56250
+(9 rows)
+</pre>
+<p>
+It's worth looking at the sample outputs for this question to see
+some of the terrible puns that have been used to name horses.
+Or you could just scan the <tt>Horses</tt> table.
+</p>
+<p> <b>Instructions:</b> </p>
+<ul>
+<li> Work on this question in the <tt>work/qQQ/</tt> directory
+<li> Define the function <tt>qQQ(...)</tt> in the file <tt>qQQ.sql</tt>
+<li> Also, place any additional views/functions used by <tt>qQQ</tt> in this file
+<li> These must be placed <i>before</i> the <tt>qQQ</tt> definition
+<li> Load it into your database using: &nbsp; <tt>psql racing -f qQQ.sql</tt>
+<li> Sample output is in the files: &nbsp; <tt>tests/*.expected</tt>
+<li> Test it via: &nbsp; <tt>select * from qQQ(...);</tt>
+<li> Check it using: &nbsp; <tt>sh check</tt> &nbsp; in the <tt>qQQ</tt> directory
+<li> Submit it using: &nbsp; <tt>give cs3311 exam_qQQ qQQ.sql</tt> &nbsp; or &nbsp; Webcms3
+</ul>
+</question>
+
+<question> 8 marks
+<p>
+Write a <b>Python/Psycopg2 script</b> that prints details of a race meeting.
+</p>
+<p>
+It takes two command-line arguments: the name of a racecourse,
+which must be an exact match, and a date.
+If the given racecourse name does not exist (no entry in the
+<tt>RaceCourses</tt> table), it should print an error
+message and exit (see message format below).
+If the racecourse is valid, but there was no meeting at that
+racecourse on the given date,
+it should print an error message and exit (see message format
+below).
+</p>
+<p>
+If there is a race meeting at the given racecourse on the given
+date, then the script should print details about the meeting
+and then print information about each race at the meeting (in their
+<tt>Races.ord</tt> order).
+</p>
+<p>
+For each race, print the first three horses in the order they
+<i>finished</i> (winning horse first, etc.), print their jockey,
+and print their individual prize.
+There is a total prize pool for each race, and this is divided
+among the first three horses as follows: the winner gets 70%
+of the prize pool, second place gets 20%, and third place gets
+10%.
+You can assume that each race has at least three horses running
+in it.
+</p>
+<p>
+Don't worry if, after computing the prizes (as integer values),
+the sum of the individual prizes does not add up to the total
+prize pool. Assume that the racecourse scoops up the extra money.
+</p>
+<p>
+The examples below show the expected output format:
+</p>
+<pre>
+$ <b>python3 ./q5</b>
+Usage: ./q5 Racecourse Date
+$ <b>python3 ./q5 Timbuktu 2020-01-01</b>
+No such racecourse
+$ <b>python3 ./q5 Flemington 2000-01-01</b>
+No such meeting
+$ <b>python3 ./q5 Caulfield 2020-07-25</b>
+Race meeting at Caulfield on 2020-07-25
+
+Race 1, prize pool $1000, run over 2400m
+Liam Neighson ridden by Tommy Lowrey wins $700
+Salmon Trout ridden by Jose Lezcano wins $200
+Chatters ridden by Johnny Murtagh wins $100
+
+Race 2, prize pool $6000, run over 2100m
+Schumer ridden by Bob Skelton wins $4200
+Mane Attraction ridden by Peter Schiergen wins $1200
+Papyrus ridden by Brian Hernandez Jr. wins $600
+
+Race 3, prize pool $8000, run over 1800m
+Justine Thyme ridden by Jean Cruguet wins $5600
+Pinto Bean ridden by Paddy Brennan wins $1600
+Knight of the Thistle ridden by Rajiv Maragh wins $800
+
+Bletchingly Stakes, prize pool $160000, run over 1200m
+Brown Jack ridden by Campbell Gillies wins $112000
+Coronach ridden by Chris Hayes wins $32000
+Lemberg ridden by Johnny Loftus wins $16000
+</pre>
+<p>There are more examples in the <tt>tests/*.expected</tt> files.</p>
+<p> <b>Instructions:</b> </p>
+<ul>
+<li> Put any SQL code for helper views and functions in <tt>qQQ.sql</tt>
+<li> Make sure that you load <tt>qQQ.sql</tt> into the database before testing; <br>
+the command &nbsp; <tt>psql racing -f qQQ.sql</tt> &nbsp; will do this
+<li> Put the Python code in the file <tt>qQQ</tt>
+<li> Put any Python helper functions in this file as well
+<li> Test it via: &nbsp; <tt>./qQQ ...</tt>
+<li> Check it using: &nbsp; <tt>sh check</tt> &nbsp; in the <tt>qQQ</tt> directory
+<li> Submit it using: &nbsp; <tt>give cs3311 exam_qQQ qQQ qQQ.sql</tt> &nbsp; or &nbsp; Webcms3
+<li> You must submit <tt>qQQ.sql</tt> even if you don't change it
+</ul>
+</question>
+
+
+<question> 7 marks
+<p>
+Consider the following ER diagram:
+</p>
+<center>
+<img src="Pics/er-diagram.png">
+</center>
+<p>
+Map this ER diagram to two different SQL schemas as follows:
+</p>
+<ol type="A">
+<li> <p>using the ER-style mapping for the subclasses</p>
+<li> <p>using the single-table mapping for subclasses</p>
+</ol>
+<p>
+Use the same names as in the diagram. Name foreign keys after
+the table they refer to. Assume all attributes are of type
+<tt>text</tt>, except for <tt>id</tt> which is an <tt>integer</tt>
+primary key.
+Text attributes can be null; primary and foreign key attributes
+cannot be null.
+Every table must have a primary key defined.
+</p>
+<p>
+To keep things more compact, where possible use the short versions
+of primary and foreign key definitions, e.g.
+</p>
+<pre>
+attr1 integer references Rel(attr2)
+<small>-- rather than</small>
+attr1 integer,
+...
+foreign key (attr1) references Rel(attr2)
+</pre>
+<br>
+<p><b>Instructions:</b></p>
+<ul>
+<li> Type your answers to this question into a file called <tt>qQQ.txt</tt>
+<li> Submit via: &nbsp; <b><tt>give cs3311 exam_q6 qQQ.txt</tt></b>
+</ul>
+</question>
+
+
+<question> 8 marks
+<p>
+Consider the following three relations (represented as tables):
+</p>
+<center>
+<table cellpadding="5">
+<tr valign="top"><td><pre>
+R
+ a | b | c
+---+---+---
+ x | 1 | a
+ y | 2 | b
+ z | 3 | a
+ x | 4 | b
+ y | 5 | a
+</pre></td>
+<td><pre>
+S
+ e | d | c
+---+---+---
+ 6 | 9 | a
+ 7 | 8 | b
+ 8 | 7 | c
+ 9 | 6 | d
+</pre></td>
+<td><pre>
+T
+ b | c
+---+---
+ 1 | a
+ 4 | b
+</pre></td></tr>
+</table>
+</center>
+<p>
+Show the result of applying each of the following
+relational algebra operations to the above tables:
+</p>
+<ol type="A">
+<li><p> &nbsp; Proj[a]R </p></li>
+<li><p> &nbsp; Sel[e>d]S </p></li>
+<li><p> &nbsp; R Join S </p></li>
+<li><p> &nbsp; R Join[b=e] S </p></li>
+<li><p> &nbsp; R Div T </p></li>
+</ol>
+<p>
+Note that <tt>join</tt> without a condition corresponds to the
+natural join operation.
+</p>
+<p>
+Display the results in the same format as above, call the table
+<tt>X</tt>, and clearly indicate the names of all attributes.
+Note that, while we are displaying results as a table, they are
+actually sets, and so there should be no duplicates.
+</p>
+<p><b>Instructions:</b></p>
+<ul>
+<li> Type your answers to this question into a file called <tt>qQQ.txt</tt>
+<li> Submit via: &nbsp; <b><tt>give cs3311 exam_q7 qQQ.txt</tt></b>
+</ul>
+</question>
+
+
+<question> 6 marks
+<p>
+Consider the following University database schema:
+</p>
+<pre>
+Students(id, name, dob, address)
+Courses(id, code, term, title, uoc)
+Enrolments(student, course, mark)
+</pre>
+<p>
+And the following Python code fragment to manipulate it:
+</p>
+<pre>
+zID = sys.argv[1]
+query = """
+select distinct term
+from   Enrolments e join Courses c on c.id = e.course
+where  student = %s order by term
+"""
+query2 = """
+select c.code, c.title, c.uoc, e.mark
+from   Enrolments e join Courses c on c.id = e.course
+where  term = %s and student = %s
+"""
+try:
+    db = psycopg2.connect("dbname=unsw")
+    cur = db.cursor()
+    cur2 = db.cursor()
+    tot1,tot2 = (0,0)
+    cur.execute(query, [zID]);
+    for term in cur.fetchall():
+        print(f"Courses for term {term[0]}")
+        cur2.execute(query2, [term, zID])
+        for res in cur2.fetchall():
+            code,title,uoc,mark = res
+            if mark is not None:
+                tot1 = tot1 + uoc
+                tot2 = tot2 + mark*uoc
+            print(f"{res[0]} {res[1]} {res[3]}")
+    print(f"{tot2 / tot1}")
+</pre>
+<br>
+<ol type="A">
+<li> <p> what is this code computing? </p> </li>
+<li> <p> what error condition has not been considered? </p></li>
+<li> <p> if a student studies 3 courses per term for 10 terms, how many <tt>execute()</tt> operations occur </p> </li>
+<li> <p> suggest a single query that could be used with a single <tt>for</tt> loop to produce the same result more efficiently </p> </li>
+</ol>
+<p><b>Instructions:</b></p>
+<ul>
+<li> Type your answers to this question into a file called <tt>qQQ.txt</tt>
+<li> Submit via: &nbsp; <b><tt>give cs3311 exam_q8 qQQ.txt</tt></b>
+</ul>
+</question>
+
+
+<question> 6 marks
+<p>
+Consider two transactions that use locking to control concurrency:
+</p>
+<pre>
+T1: Lr(Y) R(Y) U(Y) Lw(X) R(X) W(X) U(X)
+T2: Lr(X) R(X) U(X) LW(Y) R(Y) W(Y) U(Y)
+</pre>
+<p>
+where <tt>Lr</tt> applies a shared (read) lock on an object,
+<tt>Lw</tt> applies an exclusive (write) lock on an object,
+and <tt>U</tt> removes a lock on an object.
+<tt>R</tt> and <tt>W</tt> perform read and write operations
+respectively.
+</p>
+<p>
+If these two transactions are run in parallel, a possible schedule is:
+<pre>
+T1: Lr(Y) R(Y) U(Y)                                      Lw(X) R(X) W(X) U(X)
+T2:                 Lr(X) R(X) U(X) LW(Y) R(Y) W(Y) U(Y)
+</pre>
+<br>
+<ol type="A">
+<li> <p> is the concurrent schedule conflict serializable? show your reasoning </p> </li>
+<li> <p> is the concurrent schedule view serializable? show your reasoning </p> </li>
+<li> <p> write two-phase locking versions of the transactions </p> </li>
+<li> <p> are there any potential problems with using two-phase locking? </p> </li>
+</ol>
+<p><b>Instructions:</b></p>
+<ul>
+<li> Type your answers to this question into a file called <tt>qQQ.txt</tt>
+<li> Submit via: &nbsp; <b><tt>give cs3311 exam_q9 qQQ.txt</tt></b>
+</ul>
+</question>
+

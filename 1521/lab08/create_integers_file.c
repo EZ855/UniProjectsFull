@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char*argv[]) {
+    if (argc != 4) {
+        printf("Wrong number of arguments.\n");
+        return 0;
+    }
+    
+    FILE *output_stream = fopen(argv[1], "w");
+    if (output_stream == NULL) {
+        perror(argv[1]);
+        return 1;
+    }
+    
+    int end = atoi(argv[3]);
+    
+    for (int beginning = atoi(argv[2]); beginning <= end; beginning++) {
+        fprintf(output_stream, "%d\n", beginning);
+    }
+    
+
+    // fclose will flush data to file
+    // best to close file ASAP
+    // but doesn't matter as file autoamtically closed on exit
+    fclose(output_stream);
+
+    return 0;
+}

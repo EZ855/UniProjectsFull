@@ -1,0 +1,84 @@
+#!/usr/bin/python3
+
+# COMP3311 22T3 Assignment 2
+# Print a list of character roles played by an actor/actress
+
+import sys
+import psycopg2
+import helpers
+
+### Globals
+
+db = None
+usage = f"Usage: {sys.argv[0]} FullName"
+
+### Command-line args
+
+if len(sys.argv) < 2:
+   print(usage)
+   exit(1)
+
+# process the command-line args ...
+
+name = sys.argv[1]
+
+### Queries
+
+query1 = '''
+select P.id, P.name
+from People P
+where P.name = %s
+order by P.id
+'''
+
+query2 = '''
+select Psr.role, M.title, M.year
+from People P
+   join Principals Pr on (P.id=Pr.person)
+   join Playsrole Psr on (Pr.id=Psr.inmovie)
+   join Movies M on (Pr.movie=M.id)
+where P.id = %s and (Pr.job='actor' or Pr.job='actress' or Pr.job='self')
+order by M.year, M.title, Psr.role
+'''
+
+### Manipulating database
+
+try:
+   # your code goes here
+   
+   conn = psycopg2.connect("dbname=ass2")
+   db = conn.cursor()
+
+   db.execute(query1, [name])
+
+   pids = db.fetchall()
+   
+   if not pids:
+      print("No such person")
+      exit(0)
+
+   numPeople = 0
+   totPeople = len(pids)
+   
+   for pid in pids:
+      # Printing name when multiple same names
+      numPeople += 1
+      if totPeople > 1:
+         print(pid[1] + " #" + str(numPeople))
+         
+      pidString = str(pid[0])
+      db.execute(query2, [pidString])
+      
+      roles = db.fetchall()
+      if roles:
+         for tup in roles:
+               print(tup[0] + " in " + tup[1] + " (" + str(tup[2]) + ")")
+      else:
+         print("No acting roles")
+
+except Exception as err:
+   print("DB error: ", err)
+finally:
+   if db:
+      db.close()
+

@@ -1,0 +1,69 @@
+//z5383657 
+//Evan Zhang
+//18/06/2021
+
+#include <stdio.h>
+
+int main(void) {
+    int int1;
+    int int2;
+    int int3;
+    printf("Enter integer:");
+    scanf("%d", &int1);
+    printf("Enter integer:");
+    scanf("%d", &int2);
+    printf("Enter integer:");
+    scanf("%d", &int3);
+    if (int1 > int2 && int1 > int3) {
+        if (int2 > int3){
+            printf("The integers in order are: %d %d %d\n", int3, int2, int1);
+        }
+        else {
+            printf("The integers in order are: %d %d %d\n", int2, int3, int1);
+        }
+    }
+    else if (int2 > int1 && int2 > int3) {
+        if (int1 > int3) {
+            printf("The integers in order are: %d %d %d\n", int3, int1, int2);
+        }
+        else {
+            printf("The integers in order are: %d %d %d\n", int1, int3, int2);
+        }
+    }               
+    else if (int3 > int2 && int3 > int1) {
+        if (int1 > int2) {
+            printf("The integers in order are: %d %d %d\n", int2, int1, int3);
+        }
+        else {
+            printf("The integers in order are: %d %d %d\n", int1, int2, int3);
+        }
+    }
+    else if (int1 == int2 && int1 == int3) {
+        printf("The integers in order are: %d %d %d\n", int2, int1, int3);
+    }
+    else if (int1 == int2) {
+        if (int1 > int3) {
+            printf("The integers in order are: %d %d %d\n", int3, int1, int2);
+        }
+        else {
+            printf("The integers in order are: %d %d %d\n", int1, int2, int3);
+        }
+    }
+    else if (int1 == int3) {
+        if (int1 > int2) {
+            printf("The integers in order are: %d %d %d\n", int2, int1, int3);
+        }
+        else {
+            printf("The integers in order are: %d %d %d\n", int1, int3, int2);
+        }
+    }
+    else if (int3 == int2) {
+        if (int1 > int3) {
+            printf("The integers in order are: %d %d %d\n", int3, int2, int1);
+        }
+        else {
+            printf("The integers in order are: %d %d %d\n", int1, int2, int3);
+        } 
+    } 
+    return 0;
+}

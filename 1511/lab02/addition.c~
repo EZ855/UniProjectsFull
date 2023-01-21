@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main(void){
+    int students;
+    int tutors;
+    printf("Please enter the number of students and tutors:\n");
+    scanf("%d %d", &students, &tutors);
+    printf("%d %d", students, tutors);
+    return 0;
+}

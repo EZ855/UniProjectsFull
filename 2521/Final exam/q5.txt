@@ -1,0 +1,16 @@
+Question 5
+
+(a) Describe and justify the steps you would take to determine which
+    sorting algorithm the program uses.
+    Selection sort will always run in O(n^2) time and randomized quicksort will run in 
+    O(n*logn) time on average (due to the random pivot). Therefore I would give the executable two lists
+    sorted randomly with 10,000 items and 100,000 items. If the time taken grows in n^2 time it will be
+    selection sort. If it is smaller, it would be randomized quicksort.
+    Randomized quicksort may not be stable as well, so I would also look at the sorted list to see if it
+    changes between identical sortings.
+
+
+(b) Is the sorting algorithm that the program uses stable? How confident
+    are you in your conclusion? Explain your answer.
+    Yes it is stable since the second number identifies the original order for all numbers, which were
+    preserved. Very confident lol.

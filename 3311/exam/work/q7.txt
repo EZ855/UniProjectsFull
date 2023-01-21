@@ -1,0 +1,52 @@
+﻿# COMP3311 22T3 Final Exam Q7
+# Relational Algebra
+
+
+(A) Proj[a]R
+
+You would have a list of tuples with only the a column from R with no duplicates since its a set not a bag:
+ a 
+---
+ x 
+ y 
+ z 
+
+
+(B) Sel[e>d]S
+
+You would only have the first two rows:
+ e | d | c
+---+---+---
+ 6 | 9 | a
+ 7 | 8 | b
+
+
+
+(C) R Join S
+
+Natural join would join on the column C because that is the only common attribute. It would join when R.C=S.C and would not duplicate the C column as opposed to a theta join I think:
+ a | b | c | e | d
+---+---+---+---+---
+ x | 1 | a | 6 | 9 
+ y | 2 | b | 7 | 8 
+ z | 3 | a | 6 | 9 
+ x | 4 | b | 7 | 8 
+ y | 5 | a | 6 | 9 
+
+
+
+(D) R Join[b=e] S
+You would have an empty set since b never equals e:
+
+
+
+
+(E) R Div T
+
+You would have a single column a with only x in it:
+ a 
+---
+ x 
+
+
+

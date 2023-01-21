@@ -1,0 +1,10 @@
+Question 4
+
+Which of the given algorithms could have been used to construct the
+mininum spanning tree? Justify your answer.
+
+Not DFS since each added edge would need to already be connected to a node in the MST.
+Not Dijkstra's for the above reason.
+Not Prim's for the above reason as well.
+
+Therefore it can only be Kruskal's algorithm.

@@ -1,0 +1,21 @@
++ Harry
++ Ron
++ Hermione
++ Draco
++ Vincent
+s Harry Ron
+f Harry Ron
+f Harry Draco
+f Hermione Draco
+f Vincent Ron
+s Harry Ron
+f Ron Hermione
+m Harry Hermione
+r Harry
+u Vincent Ron
+r Harry
+u Harry Ron
+s Harry Ron
+m Harry Hermione
+m Harry Hermione
+u Harry Hermione

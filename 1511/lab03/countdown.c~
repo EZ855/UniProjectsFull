@@ -1,0 +1,15 @@
+//z5383657
+//Evan Zhang
+//18/06/2021
+
+#include <stdio.h>
+
+int main (void) {
+    int count = 10;
+    while (count > -1) {
+        printf("%d", count);
+        count--;
+    }
+    
+    return 0;
+}

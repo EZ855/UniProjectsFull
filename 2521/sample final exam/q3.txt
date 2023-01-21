@@ -1,0 +1,31 @@
+Question 3
+
+(a) 
+(a1) What value(s) would be stored in the root node of the above 2-3-4 
+     tree after the insertion of the value 8? 
+     Justify your answer.
+     12, 35, 60. The 8 will be inserted into the leftmost node and since it isn't full, nothing else
+     will happen.
+
+
+
+(a2) What value(s) would be stored in the node that now contains 8? 
+     Justify your answer.
+     1, 7, 8.
+
+
+(b) 
+(b1) What value(s) would be stored in the root node of the above 2-3-4 
+     tree after the insertion of the value 50? 
+     Justify your answer.
+     50 will be inserted into the 3rd child node of the root node, which is full. The 44 will then be promoted
+     to the root node, which is also full. The 35 will be promoted to be the new root node.
+     Therefore, only 35 will be stored in the root node after 50 is inserted.
+
+
+(b2) What value(s) would be stored in the node that now contains 50? 
+     Justify your answer.
+     50 and 57. From the original node, 36 is split to become it's own node and the 44 will be promoted,
+     leaving 50 and 57.
+
+

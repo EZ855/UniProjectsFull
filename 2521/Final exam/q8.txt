@@ -1,0 +1,10 @@
+Question 8
+
+Which of the given statements about tries (A, B, C or D) is false?
+Briefly explain why the statement you selected is false.
+
+B -> a word can be a prefix for another word. If for example, 'bog' was inserted and then
+'bogus' was inserted, the 'g' would remain as an ending letter and 'us' would be added to
+the end of 'bog' with the 's' becoming an ending letter.
+
+

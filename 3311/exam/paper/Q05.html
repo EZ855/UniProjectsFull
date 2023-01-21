@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>COMP3311 Final Exam 22T3 </title>
+<link rel='stylesheet' type='text/css' href='exam.css'></head>
+<body>
+<div align='center'>
+<table width='100%' border='0'>
+<tr valign='top'>
+<td align='left' width='20%'>
+  <span class='tiny'>COMP3311 Final Exam 22T3</span>
+</td>
+<td align='center' width='60%'>
+  The University of New South Wales <br>
+  <span class='heading'>COMP3311 Database Systems <br>  Final Exam 22T3</span>
+</td>
+<td align='right' width='20%'>
+  <span class='tiny'>Database Systems</span>
+</td>
+</table>
+</div>
+<center><a href='index.html'>[Front Page]</a> <a href='notes.html'>[Notes]</a> <a href='database.html'>[Database]</a> <a target='Course Website' href='https://webcms3.cse.unsw.edu.au/COMP3311/22T3/'>[Course Website]</a> <a target='Cheat Sheets' href='doco/index.html'>[Cheat Sheets]</a> 
+<br>
+<a href='Q01.html'>[Q1]</a> <a href='Q02.html'>[Q2]</a> <a href='Q03.html'>[Q3]</a> <a href='Q04.html'>[Q4]</a> <b>[Q5]</b> <a href='Q06.html'>[Q6]</a> <a href='Q07.html'>[Q7]</a> <a href='Q08.html'>[Q8]</a> <a href='Q09.html'>[Q9]</a> 
+</center>
+<hr>
+<div style='margin-left:40px;margin-right:40px'>
+<h3>Question 5 <span class='tiny'>(8 marks)</span></h3>
+<p>
+Write a <b>Python/Psycopg2 script</b> that prints details of a race meeting.
+</p>
+<p>
+It takes two command-line arguments: the name of a racecourse,
+which must be an exact match, and a date.
+If the given racecourse name does not exist (no entry in the
+<tt>RaceCourses</tt> table), it should print an error
+message and exit (see message format below).
+If the racecourse is valid, but there was no meeting at that
+racecourse on the given date,
+it should print an error message and exit (see message format
+below).
+</p>
+<p>
+If there is a race meeting at the given racecourse on the given
+date, then the script should print details about the meeting
+and then print information about each race at the meeting (in their
+<tt>Races.ord</tt> order).
+</p>
+<p>
+For each race, print the first three horses in the order they
+<i>finished</i> (winning horse first, etc.), print their jockey,
+and print their individual prize.
+There is a total prize pool for each race, and this is divided
+among the first three horses as follows: the winner gets 70%
+of the prize pool, second place gets 20%, and third place gets
+10%.
+You can assume that each race has at least three horses running
+in it.
+</p>
+<p>
+Don't worry if, after computing the prizes (as integer values),
+the sum of the individual prizes does not add up to the total
+prize pool. Assume that the racecourse scoops up the extra money.
+</p>
+<p>
+The examples below show the expected output format:
+</p>
+<pre>
+$ <b>python3 ./q5</b>
+Usage: ./q5 Racecourse Date
+$ <b>python3 ./q5 Timbuktu 2020-01-01</b>
+No such racecourse
+$ <b>python3 ./q5 Flemington 2000-01-01</b>
+No such meeting
+$ <b>python3 ./q5 Caulfield 2020-07-25</b>
+Race meeting at Caulfield on 2020-07-25
+
+Race 1, prize pool $1000, run over 2400m
+Liam Neighson ridden by Tommy Lowrey wins $700
+Salmon Trout ridden by Jose Lezcano wins $200
+Chatters ridden by Johnny Murtagh wins $100
+
+Race 2, prize pool $6000, run over 2100m
+Schumer ridden by Bob Skelton wins $4200
+Mane Attraction ridden by Peter Schiergen wins $1200
+Papyrus ridden by Brian Hernandez Jr. wins $600
+
+Race 3, prize pool $8000, run over 1800m
+Justine Thyme ridden by Jean Cruguet wins $5600
+Pinto Bean ridden by Paddy Brennan wins $1600
+Knight of the Thistle ridden by Rajiv Maragh wins $800
+
+Bletchingly Stakes, prize pool $160000, run over 1200m
+Brown Jack ridden by Campbell Gillies wins $112000
+Coronach ridden by Chris Hayes wins $32000
+Lemberg ridden by Johnny Loftus wins $16000
+</pre>
+<p>There are more examples in the <tt>tests/*.expected</tt> files.</p>
+<p> <b>Instructions:</b> </p>
+<ul>
+<li> Put any SQL code for helper views and functions in <tt>q5.sql</tt>
+<li> Make sure that you load <tt>q5.sql</tt> into the database before testing; <br>
+the command &nbsp; <tt>psql racing -f q5.sql</tt> &nbsp; will do this
+<li> Put the Python code in the file <tt>q5</tt>
+<li> Put any Python helper functions in this file as well
+<li> Test it via: &nbsp; <tt>./q5 ...</tt>
+<li> Check it using: &nbsp; <tt>sh check</tt> &nbsp; in the <tt>q5</tt> directory
+<li> Submit it using: &nbsp; <tt>give cs3311 exam_q5 q5 q5.sql</tt> &nbsp; or &nbsp; Webcms3
+<li> You must submit <tt>q5.sql</tt> even if you don't change it
+</ul>
+
+</div>
+<center><i>End of Question</i></center>
+</body>
+</html>

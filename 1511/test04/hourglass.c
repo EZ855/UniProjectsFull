@@ -1,0 +1,56 @@
+//z5383657
+//Evan Zhang
+//01/07/2021
+
+#include <stdio.h>
+
+int main (void) {
+    
+    int hourglass_height_and_width;
+    
+    printf("Please enter a size: ");
+    scanf("%d", &hourglass_height_and_width);  
+    
+    int loop_counter0 = 0;
+    
+    while (loop_counter0 < hourglass_height_and_width) {
+    
+        int loop_counter1 = 0;
+        
+        while (loop_counter1 < hourglass_height_and_width) {
+            if (loop_counter0 == 0 || loop_counter0 == hourglass_height_and_width - 1) {
+                printf(" -");
+            }
+            else if (loop_counter0 < hourglass_height_and_width/2) {
+                if (loop_counter1 >= loop_counter0 && loop_counter1 <= hourglass_height_and_width - loop_counter0 - 1) {
+                    printf("%2d", loop_counter0);
+                }
+                else {
+                    printf(" -");
+                }
+            }
+            else if (loop_counter0 == hourglass_height_and_width/2) {
+                if (loop_counter1 == hourglass_height_and_width/2) {
+                    printf("%2d", loop_counter0);
+                }
+                else {
+                    printf(" -");
+                }
+            }
+            else if (loop_counter0 > hourglass_height_and_width/2) {
+                if (loop_counter1 <= loop_counter0 && loop_counter1 >= hourglass_height_and_width - loop_counter0 - 1) {
+                    int last_half_hourglass = hourglass_height_and_width - loop_counter0 - 1;
+                    printf("%2d", last_half_hourglass);
+                }
+                else {
+                    printf(" -");
+                }
+            }
+            loop_counter1++;
+        }
+        loop_counter0++;
+        printf("\n");
+    }
+
+    return 0;
+}

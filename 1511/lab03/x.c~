@@ -1,0 +1,30 @@
+//z5383657
+//Evan Zhang
+//18/06/2021
+
+#include <stdio.h>
+
+int main (void) {
+    int overall_size;
+    printf("Enter size: ");
+    scanf("%d", &overall_size);
+    
+    
+    int row_counter = 0;
+    while (row_counter < overall_size) {
+        int column_counter = 0;
+        while (column_counter < overall_size) {
+            if ((column_counter == row_counter) || (column_counter + row_counter == overall_size - 1)){
+                printf("*");
+            }
+            else {
+            printf("-");
+            }
+            column_counter++;
+        }
+        row_counter++;
+    printf("\n");
+    }
+
+    return 0;
+}

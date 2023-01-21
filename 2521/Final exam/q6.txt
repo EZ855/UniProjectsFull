@@ -1,0 +1,31 @@
+Question 6
+
+Which of the data structures is most suitable? Justify your answer.
+You must use time complexities as a basis for your justification.
+
+Ordered linked list:
+Push -> O(n)
+Pop -> O(1)
+PrintInOrder -> O(n)
+
+Ordered array:
+Push -> O(n)
+Pop -> O(n)
+PrintInOrder -> O(n)
+
+AVL tree:
+Push -> O(logn)
+Pop -> O(logn)
+PrintInOrder -> O(n)
+
+Hash table (using double hashing):
+Push -> O(1/alpha *log(1/(1 - alpha))), where alpha = M/N (i.e. load)
+Pop -> O(1/alpha *log(1/(1 - alpha)))
+PrintInOrder -> O(n^2)
+
+Max Heap:
+Push -> O(logn)
+Pop -> O(logn)
+PrintInOrder -> O(n)
+
+Therefore either a max heap or AVL tree can be used.

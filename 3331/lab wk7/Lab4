@@ -1,0 +1,66 @@
+Exercise 1:
+1.
+Client ip = 192.168.1.102
+Port = 1161
+
+Server = 128.119.245.12
+Port = 80
+
+2.
+232129013
+
+3., 4.
+pckt, seq num, send time, ack receive time, sRTT, eRTT, pckt length
+1 = 232129013, 0.026477, 0.053937, 0.027460, 0.027460, 565
+2 = 232129578, 0.041737, 0.077294, 0.035557, 0.028472, 1460
+3 = 232131038, 0.054026, 0.124085, 0.070059, 0.033670, 1460
+4 = 232132498, 0.054690, 0.169118, 0.114428, 0.043765, 1460
+5 = 232133958, 0.077405, 0.217299, 0.139894, 0.055781, 1460
+6 = 232135418, 0.078157, 0.267802, 0.189645, 0.072514, 1460
+
+5.
+win = 5840 for first packet
+It keeps increasing (6780, 8760, 11680) so it means there is no lack of buffer space.
+No, it doesn't throttle the sender.
+
+6.
+Identical sequence numbers.
+Time sequence (stevens)
+
+7.
+If packets are received before an ack is sent, the acks are combined to save bandwidth.
+
+8.
+Amount of data sent divided by time = throughput
+
+Subtract starting sequence number by final ack number:
+232293103 - 232129013 = 164000 bytes
+Time when first packet sent after connection is made minus final ack received time:
+time = 5.455830 - 0.026477 = 5.429353 seconds
+30,238.60 bytes per second or around 0.25 Mbs
+
+
+Exercise 2:
+1.
+Initial seq num = 2818463618
+
+2.
+2818463619
+Sequence number + packet length
+
+3.
+1247095791
+Server's sequence number + packet length
+
+No, there is no data as the sequence number is the same
+
+4.
+They have simultaneously decided to close the server. This is because he FINACK packets were sent before their respective ACKs
+
+5.
+SYN packet length = 1
+FIN packet length = 1
+653-618 = 35.
+35 bytes minus SYN and FYN bytes
+Therefore 33 bytes were transferred
+Amount of data transferred is just final ack minus initial sequence number minus 2 (for the SYN and FYN bytes)

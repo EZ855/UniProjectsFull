@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int main(int argc, char*argv[]) {
+    if (argc != 2) {
+        printf("Wrong number of arguments.\n");
+        return 0;
+    }
+    
+    FILE *output_stream = fopen(argv[1], "r");
+    if (output_stream == NULL) {
+        perror(argv[1]);
+        return 1;
+    }
+    
+    int vowels = 0;
+    char line[1024];
+    while(fgets(line, 1024, output_stream) != NULL) {
+        int i = 0;
+        while (line[i] != '\0') {
+            if (line[i] == 'a' ||line[i] == 'A') {
+                vowels++;
+            }
+            if (line[i] == 'e' ||line[i] == 'E') {
+                vowels++;
+            }
+            if (line[i] == 'o' ||line[i] == 'I') {
+                vowels++;
+            }
+            if (line[i] == 'i' ||line[i] == 'O') {
+                vowels++;
+            }
+            if (line[i] == 'u' ||line[i] == 'U') {
+                vowels++;
+            }
+            i++;
+        }
+        
+    }
+    printf("%d\n", vowels);
+
+    // fclose will flush data to file
+    // best to close file ASAP
+    // but doesn't matter as file autoamtically closed on exit
+    fclose(output_stream);
+
+    return 0;
+}

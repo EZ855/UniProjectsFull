@@ -1,0 +1,171 @@
+// Multiply a float by 2048 using bit operations only
+
+#include <stdio.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <assert.h>
+
+#include "floats.h"
+
+float_components_t float_bits(uint32_t f);
+int is_nan(float_components_t f);
+int is_positive_infinity(float_components_t f);
+int is_negative_infinity(float_components_t f);
+int is_zero(float_components_t f);
+
+
+// float_2048 is given the bits of a float f as a uint32_t
+// it uses bit operations and + to calculate f * 2048
+// and returns the bits of this value as a uint32_t
+//
+// if the result is too large to be represented as a float +inf or -inf is returned
+//
+// if f is +0, -0, +inf or -inf, or Nan it is returned unchanged
+//
+// float_2048 assumes f is not a denormal number
+//
+uint32_t float_2048(uint32_t f) {
+    
+    float_components_t struc = float_bits(f);
+    uint32_t flt = f;
+    
+    if (is_nan(struc) == 1) {
+        return f;
+    }
+    if (is_positive_infinity(struc) == 1) {
+        return f;
+    }
+    if (is_negative_infinity(struc) == 1) {
+        return f;
+    }
+    if (is_zero(struc) == 1) {
+        return f;
+    }
+    
+    if (struc.exponent >= (245)) {
+        if (struc.sign == 1) {
+            return 0xFF800000;
+        }
+        else {
+            return 0x7F800000;
+        }
+    }
+    else {
+        struc.exponent = struc.exponent + 11;
+        uint32_t real_exp = 0x000000FF & struc.exponent;
+        real_exp = real_exp << 23;
+        flt = flt & 0x807FFFFF;
+        flt = flt | real_exp;
+    }
+
+    return flt;
+
+}
+
+// separate out the 3 components of a float
+float_components_t float_bits(uint32_t f) {
+    uint32_t flt = f;
+    
+    uint32_t sgn = (flt >> 31) & 0x1;
+    uint32_t exp = (flt >> 23) & 0xFF;
+    uint32_t frc = (flt) & 0x7FFFFF;
+    
+    float_components_t struc;
+    
+    struc.sign = sgn;
+    struc.exponent = exp;
+    struc.fraction = frc;
+    
+    return struc;
+    
+    
+}
+
+// given the 3 components of a float
+// return 1 if it is NaN, 0 otherwise
+int is_nan(float_components_t f) {
+
+    uint32_t exponent = f.exponent;
+    uint32_t fraction = f.fraction;
+    if (exponent == 0xFF) {
+        if (fraction != 0x000000) {
+            return 1;
+        }
+        else {
+            return 0;
+        }
+    }
+    else {
+        return 0;
+    }
+    
+}
+
+// given the 3 components of a float
+// return 1 if it is inf, 0 otherwise
+int is_positive_infinity(float_components_t f) {
+
+    uint32_t sign = f.sign;
+    uint32_t exponent = f.exponent;
+    uint32_t fraction = f.fraction;
+    if (sign == 0x0) {
+        if (exponent == 0xFF) {
+            if (fraction == 0x000000) {
+                return 1;
+            }
+            else {
+                return 0;
+            }
+        }
+        else {
+            return 0;
+        }
+    }
+    else {
+        return 0;
+    }
+}
+
+// given the 3 components of a float
+// return 1 if it is -inf, 0 otherwise
+int is_negative_infinity(float_components_t f) {
+
+    uint32_t sign = f.sign;
+    uint32_t exponent = f.exponent;
+    uint32_t fraction = f.fraction;
+    if (sign == 0x1) {
+        if (exponent == 0xFF) {
+            if (fraction == 0x000000) {
+                return 1;
+            }
+            else {
+                return 0;
+            }
+        }
+        else {
+            return 0;
+        }
+    }
+    else {
+        return 0;
+    }
+}
+
+// given the 3 components of a float
+// return 1 if it is 0 or -0, 0 otherwise
+int is_zero(float_components_t f) {
+
+    uint32_t exponent = f.exponent;
+    uint32_t fraction = f.fraction;
+    if (exponent == 0x00) {
+        if (fraction == 0x000000) {
+            return 1;
+        }
+        else {
+            return 0;
+        }
+    }
+    else {
+        return 0;
+    }
+}

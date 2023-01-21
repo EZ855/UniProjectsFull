@@ -1,0 +1,23 @@
+Input	Initial	Number	AvgTime		AvgTime
+Size	Order	of Runs	for sortIntList	for sort
+10000	random	10	0.14		0.00
+10000	sorted	10	0.16		0.00
+10000	reverse	10	0.00		0.00
+20000	random	10	0.64		0.00
+20000	sorted	10	0.60		0.00
+20000	reverse	10	0.00		0.00
+40000	random	5	3.35		0.01
+40000	sorted	5	2.44		0.00
+40000	reverse	5	0.01		0.00
+100000	random	1	41.04		0.03
+100000	sorted	1	15.26		0.01
+100000	reverse	10	0.02		0.02
+
+Reverse-sorted is always faster for my code because my code checks if the next number is greater than or equal to the current number,
+making it only need to deposit each number at the start of the list (each subsequent number will be smaller than the start of the list)
+by my code.
+
+Sorted is not that fast for my code because it will need to check each number deposited beforehand until the end of the list it is building
+before it can deposit each number.
+
+Random should theoretically be faster than sorting a sorted list as it doesn't need to go through the entire list before depositing the number?

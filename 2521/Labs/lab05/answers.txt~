@@ -1,0 +1,30 @@
+
+NOTE:
+- Your time complexities should be expressed in big-O notation and be in
+  terms of n, where n is the number of people who  have  been  added  to
+  Friendbook.
+
+===============
+  FbUnfriend
+===============
+
+- Worst case time complexity: O(log(n))
+
+- Explanation: calls mapget and mapcontains (both log(n))
+
+===============
+FbMutualFriends
+===============
+
+- Worst case time complexity: O(nlog(n))
+
+- Explanation: calls FBIsFriend on every person
+
+===============
+ FbFriendRecs1
+===============
+
+- Worst case time complexity: O(...)
+
+- Explanation: ...
+

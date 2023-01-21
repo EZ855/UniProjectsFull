@@ -1,0 +1,17 @@
+PING www.abc.net (162.243.117.188) 22(50) bytes of data.
+30 bytes from vip.nomoz.com (162.243.117.188): icmp_seq=1 ttl=52 time=261 ms
+30 bytes from vip.nomoz.com (162.243.117.188): icmp_seq=2 ttl=52 time=260 ms
+30 bytes from vip.nomoz.com (162.243.117.188): icmp_seq=3 ttl=52 time=260 ms
+30 bytes from vip.nomoz.com (162.243.117.188): icmp_seq=4 ttl=52 time=260 ms
+30 bytes from vip.nomoz.com (162.243.117.188): icmp_seq=5 ttl=52 time=261 ms
+30 bytes from vip.nomoz.com (162.243.117.188): icmp_seq=6 ttl=52 time=260 ms
+30 bytes from vip.nomoz.com (162.243.117.188): icmp_seq=7 ttl=52 time=260 ms
+30 bytes from vip.nomoz.com (162.243.117.188): icmp_seq=8 ttl=52 time=260 ms
+30 bytes from vip.nomoz.com (162.243.117.188): icmp_seq=9 ttl=52 time=260 ms
+30 bytes from vip.nomoz.com (162.243.117.188): icmp_seq=10 ttl=52 time=260 ms
+30 bytes from vip.nomoz.com (162.243.117.188): icmp_seq=11 ttl=52 time=260 ms
+30 bytes from vip.nomoz.com (162.243.117.188): icmp_seq=12 ttl=52 time=260 ms
+
+--- www.abc.net ping statistics ---
+12 packets transmitted, 12 received, 0% packet loss, time 11014ms
+rtt min/avg/max/mdev = 259.972/260.329/260.956/0.285 ms

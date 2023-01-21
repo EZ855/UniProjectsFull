@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>COMP3311 Final Exam 22T3 </title>
+<link rel='stylesheet' type='text/css' href='exam.css'></head>
+<body>
+<div align='center'>
+<table width='100%' border='0'>
+<tr valign='top'>
+<td align='left' width='20%'>
+  <span class='tiny'>COMP3311 Final Exam 22T3</span>
+</td>
+<td align='center' width='60%'>
+  The University of New South Wales <br>
+  <span class='heading'>COMP3311 Database Systems <br>  Final Exam 22T3</span>
+</td>
+<td align='right' width='20%'>
+  <span class='tiny'>Database Systems</span>
+</td>
+</table>
+</div>
+<center><a href='index.html'>[Front Page]</a> <a href='notes.html'>[Notes]</a> <a href='database.html'>[Database]</a> <a target='Course Website' href='https://webcms3.cse.unsw.edu.au/COMP3311/22T3/'>[Course Website]</a> <a target='Cheat Sheets' href='doco/index.html'>[Cheat Sheets]</a> 
+<br>
+<a href='Q01.html'>[Q1]</a> <a href='Q02.html'>[Q2]</a> <b>[Q3]</b> <a href='Q04.html'>[Q4]</a> <a href='Q05.html'>[Q5]</a> <a href='Q06.html'>[Q6]</a> <a href='Q07.html'>[Q7]</a> <a href='Q08.html'>[Q8]</a> <a href='Q09.html'>[Q9]</a> 
+</center>
+<hr>
+<div style='margin-left:40px;margin-right:40px'>
+<h3>Question 3 <span class='tiny'>(5 marks)</span></h3>
+<p style="color:red">You will need to change the name of the database from "property"
+to "racing" in the "check" script before the checking will work properly.
+</p>
+<p>
+Write an <b>SQL function</b> that prints a summary of horses' gender
+and age for a given type of race.
+</p>
+<p>
+We want to represent information about each horse by its single
+character <tt>gender</tt> value and its single digit age value.
+For example <tt>M5</tt> represents a 5-year-old mare and <tt>F2</tt>
+represents a 2-year-old filly.
+</p>
+<p>
+For each race, we want to give a comma-separated list of horse
+gender/age entries. The list should be ordered by gender, and then
+by age. For more detail on what these lists look like, see the
+example below, or the expected
+outputs in the <tt>tests</tt> directory.
+</p>
+<p>
+We identify races by their "type", which typically appears as the
+last word in their name. For example, the "Melbourne Cup" has type "Cup",
+and the "Cox Plate" race has type "Plate". Many races have type "Stakes".
+The function should include any races whose name ends in the value
+given as the function argument. Name matching is case-sensitive.
+</p>
+<p>
+The function returns tuples of type <tt>race_horses</tt>, which
+consist of two text strings: one for the name of the race, the
+other for the list of gender/age entries for the runners in that race.
+</p>
+<p>
+Note that from within the function, you can refer to the <tt>text</tt>
+parameter using the notation <tt>$1</tt>.
+</p>
+<p>
+The <tt>race_horses</tt> type will be created each time you load
+the <tt>q3.sql</tt> file into the database. Each time, it gives
+a <tt>NOTICE</tt>; this is <em>not</em> an error message.
+</p>
+<p>
+Define the function as &nbsp; function <tt>q3(text) returns race_horses ... </tt>
+</p>
+<p>
+Remember that it is an SQL function, <em>not</em> a PLpgSQL function.
+</p>
+<p>
+An example of usage:
+</p>
+<pre>
+racing=# <b>select * from q3('Plate') order by race;</b>
+              race              |         horses          
+--------------------------------+-------------------------
+ Breeders' Plate                | F2,F3,F3,M3,M5
+ Craven Plate                   | F4,F4,F5,G3,M3,M4,M5,S4
+ Frank Packer Plate             | F3,F3,G3,G3,M3,M4
+ Japan Racing Association Plate | F3,F3,F4,F4,F4,M2,M3,M3
+ Maribyrnong Plate              | F4,F4,G3,M3,M4,M4
+ Oakleigh Plate                 | F3,F4,F4,G3,M3,M4
+ Rough Habit Plate              | F3,F3,F3,F4,G3,M3,M4,M4
+ Vo Rogue Plate                 | F3,F3,F4,F5,G4,M2,M4,S5
+ W. S. Cox Plate                | F2,F4,G3,M4,M4,M4,M5,S4
+(9 rows)
+</pre>
+
+<p> <b>Instructions:</b> </p>
+<ul>
+<li> Work on this question in the <tt>work/q3/</tt> directory
+<li> Define a function <tt>q3(text)</tt> in the file <tt>q3.sql</tt>
+<li> Also, place any additional views used by <tt>q3</tt> in this file
+<li> Additional views must be placed <i>before</i> the <tt>q3</tt> definition
+<li> Load it into your database using: &nbsp; <tt>psql racing -f q3.sql</tt>
+<li> Sample output is in the file: &nbsp; <tt>tests/01.expected</tt>
+<li> Test it via: &nbsp; <tt>select * from q3(...);</tt>
+<li> Check it using: &nbsp; <tt>sh check</tt> &nbsp; in the <tt>q3</tt> directory
+<li> Submit it using: &nbsp; <tt>give cs3311 exam_q3 q3.sql</tt> &nbsp;or&nbsp; Webcms3
+</ul>
+
+</div>
+<center><i>End of Question</i></center>
+</body>
+</html>

@@ -1,0 +1,45 @@
+// z5383657
+// Evan Zhang
+// 21/07/2021
+
+#include <stdio.h>
+
+int main (void) {
+    
+    char word[256] = {0};
+    
+    int letter1 = 0;
+    int letter2 = 0;
+    
+    int i = 0;
+    int j;
+    while (letter2 != '\n' || letter1 != '\n') {
+        j = 0;
+        
+        letter1 = getchar();
+        
+        if (letter2 == 0 && letter1 != '\n') {
+            letter2 = getchar();
+            j = 2;
+        }
+        
+        if (j == 2) {  
+            if (letter1 >= letter2 && letter2 != '\n') {
+                word[i] = letter2;
+            }
+            else if (letter2 != '\n') {
+                word[i] = letter1;
+            }
+            letter2 = 0;
+            i++;
+        }
+        else if (letter2 == '\n' || letter1 == '\n') {
+            word[i] = letter1;
+            i++;
+        } 
+    }
+    
+    printf("%s\n", word);
+
+    return 0;
+}

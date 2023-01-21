@@ -1,0 +1,4 @@
+Exercise 1:
+1. Max size is 100. Drops back down to 0 because of packet time out. Ramps back up to half (~50) before going back to linear increase. This is because the congestion window has been estimated.
+
+2. 

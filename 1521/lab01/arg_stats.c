@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char **argv) {
+	if (argc == 1) {
+	    printf("Usage: ./arg_stats NUMBER [NUMBER ...]\n");
+	    exit(0);
+	}
+	else if (argc == 2) {
+	    printf("MIN:  %d\nMAX:  %d\nSUM:  %d\nPROD: %d\nMEAN: %d\n",
+                atoi(argv[1]), atoi(argv[1]), atoi(argv[1]),
+                atoi(argv[1]), atoi(argv[1]));
+	}
+	else {
+	    int min = atoi(argv[1]);
+	    int max = atoi(argv[1]);
+	    int sum = 0;
+	    int prod = 1;
+	    int mean;
+	    
+	    for (int i = 1; i < argc; i++) {
+	        if (min > atoi(argv[i])) {
+	            min = atoi(argv[i]);
+	        }
+	        if (max < atoi(argv[i])) {
+	            max = atoi(argv[i]);
+	        }
+	        sum += atoi(argv[i]);
+	        prod = prod * atoi(argv[i]);
+	    }
+	    mean = sum/(argc - 1);
+	    
+	    printf("MIN:  %d\nMAX:  %d\nSUM:  %d\nPROD: %d\nMEAN: %d\n",
+                min, max, sum, prod, mean);
+	    
+	}
+	return 0;
+}

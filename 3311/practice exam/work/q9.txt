@@ -1,0 +1,25 @@
+﻿# COMP3311 21T3 Final Exam Q9
+# Flight booking triggers
+
+(A)
+Checking what type of operation caused the trigger to fire
+Checking if the flight number exists in the database
+Checking if the given flight is full
+
+
+(B)
+
+
+
+(C)
+
+
+
+(D)
+
+
+
+(E)
+
+
+

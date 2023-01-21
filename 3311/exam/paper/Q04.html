@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>COMP3311 Final Exam 22T3 </title>
+<link rel='stylesheet' type='text/css' href='exam.css'></head>
+<body>
+<div align='center'>
+<table width='100%' border='0'>
+<tr valign='top'>
+<td align='left' width='20%'>
+  <span class='tiny'>COMP3311 Final Exam 22T3</span>
+</td>
+<td align='center' width='60%'>
+  The University of New South Wales <br>
+  <span class='heading'>COMP3311 Database Systems <br>  Final Exam 22T3</span>
+</td>
+<td align='right' width='20%'>
+  <span class='tiny'>Database Systems</span>
+</td>
+</table>
+</div>
+<center><a href='index.html'>[Front Page]</a> <a href='notes.html'>[Notes]</a> <a href='database.html'>[Database]</a> <a target='Course Website' href='https://webcms3.cse.unsw.edu.au/COMP3311/22T3/'>[Course Website]</a> <a target='Cheat Sheets' href='doco/index.html'>[Cheat Sheets]</a> 
+<br>
+<a href='Q01.html'>[Q1]</a> <a href='Q02.html'>[Q2]</a> <a href='Q03.html'>[Q3]</a> <b>[Q4]</b> <a href='Q05.html'>[Q5]</a> <a href='Q06.html'>[Q6]</a> <a href='Q07.html'>[Q7]</a> <a href='Q08.html'>[Q8]</a> <a href='Q09.html'>[Q9]</a> 
+</center>
+<hr>
+<div style='margin-left:40px;margin-right:40px'>
+<h3>Question 4 <span class='tiny'>(4 marks)</span></h3>
+<p>
+Write a <b>PLpgSQL function</b> that gives the average winnings for
+horses given by a partial name.
+</p>
+<p>
+The average winnings for a horse is defined as <i>T/R</i>, where
+</p>
+<ul>
+<li> <i>T</i> = total of prize pools from races that the horse won
+<li> <i>R</i> = the number of races that the horse has run in
+</ul>
+<p>
+Note that we are not using the 70:20:10 split of prize pool
+like in Q5.
+In this question, if a horse wins, it takes the entire prize pool.
+If it does not win, it gets nothing.
+For example, the horse called "Eddie" ran in 14 races, and won two
+of them for total winnings of 150000&nbsp;+&nbsp;160000&nbsp;=&nbsp;310000.
+Eddie's average winnings would thus be 310000/14&nbsp;=&nbsp;22142.
+</p>
+<p>
+The function returns tuples of type <tt>horse_winnings</tt>, which
+consist of two attributes: one for the name of the horse, the
+other for the integer value of their average winnings.
+You can assume that no horse in the database has run in no races
+(i.e no horse has <i>R</i> = 0).
+</p>
+<p>
+The function returns one tuple for each horse whose name matches
+the partial name given as the function parameter.
+Matching should be case-insensitive against <tt>Horses.name</tt>.
+If there are no matching horses, return an empty table.
+<p>
+The <tt>horse_winnings</tt> type will be created each time you load
+the <tt>q4.sql</tt> file into the database. Each time, it gives
+a <tt>NOTICE</tt>; this is <em>not</em> an error message.
+</p>
+<p>
+Define the function as &nbsp; function <tt>q4(part_name text) returns setof horse_winnings ... </tt>
+</p>
+<p>
+An example of usage is below. There are more examples in the <tt>tests</tt>
+directory.
+</p>
+<pre>
+racing=# <b>select * from q4('Eddie');</b>
+ horse | average 
+-------+---------
+ Eddie |   22142
+(1 row)
+
+racing=# <b>select * from q4('neigh') order by horse;</b>
+           horse           | average 
+---------------------------+---------
+ Always Neighing           |   11133
+ Arnold Schwarze-neigh-ger |   27052
+ Hay Neighbor              |   75000
+ Hermoineigh               |    8947
+ Liam Neighson             |  108538
+ Neigh Sayer               |   77538
+ NeighNeigh Leaks          |   65000
+ Ron Neighsly              |     833
+ Sir Neighs Alot           |   56250
+(9 rows)
+</pre>
+<p>
+It's worth looking at the sample outputs for this question to see
+some of the terrible puns that have been used to name horses.
+Or you could just scan the <tt>Horses</tt> table.
+</p>
+<p> <b>Instructions:</b> </p>
+<ul>
+<li> Work on this question in the <tt>work/q4/</tt> directory
+<li> Define the function <tt>q4(...)</tt> in the file <tt>q4.sql</tt>
+<li> Also, place any additional views/functions used by <tt>q4</tt> in this file
+<li> These must be placed <i>before</i> the <tt>q4</tt> definition
+<li> Load it into your database using: &nbsp; <tt>psql racing -f q4.sql</tt>
+<li> Sample output is in the files: &nbsp; <tt>tests/*.expected</tt>
+<li> Test it via: &nbsp; <tt>select * from q4(...);</tt>
+<li> Check it using: &nbsp; <tt>sh check</tt> &nbsp; in the <tt>q4</tt> directory
+<li> Submit it using: &nbsp; <tt>give cs3311 exam_q4 q4.sql</tt> &nbsp; or &nbsp; Webcms3
+</ul>
+
+</div>
+<center><i>End of Question</i></center>
+</body>
+</html>

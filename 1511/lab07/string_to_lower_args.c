@@ -1,0 +1,27 @@
+// z5383657
+// Evan Zhang
+// 18/07/2021
+
+#include <stdio.h>
+
+int main(int argc, char *argv[]){
+
+    int word_c = 1;
+    while (word_c < argc) {
+    
+        int char_c = 0;
+        while (argv[word_c][char_c] != '\0') {
+        
+            if (argv[word_c][char_c] >= 'A' && argv[word_c][char_c] <= 'Z') {
+                putchar(argv[word_c][char_c] - 'A' + 'a');
+            }
+            else {
+                putchar(argv[word_c][char_c]);
+            }
+            char_c++;
+        }
+        word_c++;
+    }
+    putchar('\n');
+    return 0;
+}

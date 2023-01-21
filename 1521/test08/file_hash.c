@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdint.h>
+
+uint32_t hash(uint32_t old_hash_value, uint8_t byte, size_t index);
+
+int main(int argc, char *argv[]) {
+
+    if (argc != 2) {
+        printf("Wrong number of arguments.\n");
+        return 0;
+    }
+    
+
+    
+    FILE *output_stream = fopen(argv[1], "r");
+    if(output_stream == NULL) {
+        perror(argv[1]);
+        return 1;
+    }
+    
+    
+    uint32_t hash_value = 0;
+    size_t i = 0;
+    int character = 0;
+    do {
+        character = fgetc(output_stream);
+        if (character == EOF) {
+            break;
+        }
+        uint8_t charact = character;
+        hash_value = hash(hash_value, charact, i);
+        i++;
+    } while(character != EOF);
+    
+    printf("%u\n", hash_value);
+    return 0;
+}
+
+// DO NOT CHANGE THIS FUNCTION
+
+uint32_t hash(uint32_t old_hash_value, uint8_t byte, size_t index) {
+    return old_hash_value + (byte << (index % 17));
+}

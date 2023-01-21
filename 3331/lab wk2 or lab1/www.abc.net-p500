@@ -1,0 +1,6 @@
+PING www.abc.net (162.243.117.188) 472(500) bytes of data.
+480 bytes from vip.nomoz.com (162.243.117.188): icmp_seq=1 ttl=52 time=260 ms
+
+--- www.abc.net ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 260.483/260.483/260.483/0.000 ms

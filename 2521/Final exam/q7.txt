@@ -1,0 +1,19 @@
+Question 7
+
+(a) How many items are examined in searching for the key 42? Justify
+    your answer.
+    42 will be stored in the key value 9. The values before 42 will be 9, 20 and 31.
+    Therefore it will be 4, since 42 will be examined as well as the above three.
+
+
+(b) How many items are examined in searching for the key 111? Justify
+    your answer.
+    111 will be stored in the key value 1. It will search all the key values in 1 since
+    111 is not stored. The numbers will be 1, 12, 23, 34, 45, 56, 67, 78, 89 and 100.
+    Therefore 10 items will be examined, excluding the NULL item at the end of the list.
+
+
+(c) What is the worst-case search cost after N total items have been
+    inserted? Justify your answer.
+    Worst case, the key being searched will have around n/10 items stored. If the item is at the end
+    of the list, the worst case would therefore be O(n/10).

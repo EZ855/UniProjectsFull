@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>COMP3311 Final Exam 22T3 </title>
+<link rel='stylesheet' type='text/css' href='exam.css'></head>
+<body>
+<div align='center'>
+<table width='100%' border='0'>
+<tr valign='top'>
+<td align='left' width='20%'>
+  <span class='tiny'>COMP3311 Final Exam 22T3</span>
+</td>
+<td align='center' width='60%'>
+  The University of New South Wales <br>
+  <span class='heading'>COMP3311 Database Systems <br>  Final Exam 22T3</span>
+</td>
+<td align='right' width='20%'>
+  <span class='tiny'>Database Systems</span>
+</td>
+</table>
+</div>
+<hr>
+<div style='margin-left:40px;margin-right:40px'>
+<p>
+The database for the exam is concerned with horse racing.
+It contains information about race-courses, horses,
+jockeys, races, race meetings, etc.
+The following ER design gives an overview of this database:
+<center>
+<img src="Pics/racing-schema.png">
+</center>
+<p>
+Note that we did not include attributes in the above diagram;
+the goal is simply to show the relationships.
+Also, we have not copied the relationship names into the SQL
+schemaa exactly as written in the diagram.
+The SQL schema below gives all of the implementation details:
+</p>
+<pre>
+create table Horses (
+	id          integer,
+	name        text not null unique,
+	gender      char(1) not null check (gender in ('S','G','M','F')),
+	age         integer not null check (age between 2 and 8),
+	primary key (id)
+);
+
+create table Jockeys (
+	id          integer,
+	name        text not null unique,
+	gender      char(1),
+	primary key (id)
+);
+
+create table RaceCourses (
+	id          integer,
+	name        text not null unique,
+	city        text not null,
+	primary key (id)
+);
+
+create table Meetings (
+	id          integer,
+	run_on      date not null,
+	run_at      integer not null references RaceCourses(id),
+	primary key (id)
+);
+
+create table Races (
+	id          integer,
+	name        text not null,
+	ord         integer check (ord between 1 and 15),
+	level       integer not null check (level between 1 and 4),
+	prize       integer not null check (prize >= 1000),
+	length      integer not null check (length >= 1000),
+	part_of     integer not null references Meetings(id),
+	primary key (id)
+);
+
+create table Runners (
+	id          integer,
+	horse       integer not null references Horses(id),
+	race        integer not null references Races(id),
+	jockey      integer not null references Jockeys(id),
+	finished    integer check (finished > 0),
+	primary key (id)
+);
+	
+</pre>
+<p>
+Notes on the above schema:
+</p>
+<ul>
+<li> the schema is heavily normalised
+<li> a race meeting is a sequence of races held at a particular racecourse on a particular day
+<li> the races may be "special" (have their own name), or are simply "Race 1", "Race 2", etc
+<li> horse "genders" are Stallion, Gelding, Mare, Filly
+<li> all ages and genders of horses can run in all races
+<li> a race consists of a number of horses each of which is ridden by a jockey
+<li> horses finish the race in a particular order; there are no ties
+</ul>
+<br>
+<p>
+The data is coming soon ...
+</p>
+<!--
+<p>
+You should familiarise yourself with this schema
+before proceeding to solve the queries.
+It would also be useful to examine the database contents to ensure
+that you understand what all of the data represents.
+</p>
+<p>
+You can create the database by running the commands
+</p>
+<pre>
+createdb property
+psql property -f property.dump
+</pre>
+<p>
+The above assumes that (a) your PostgreSQL server is running,
+(b) you are in your exam work directory.
+</p>
+-->
+
+</div>
+<center><i>End of Notes</i></center>
+</body>
+</html>

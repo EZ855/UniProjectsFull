@@ -1,0 +1,29 @@
+// z5383657
+// Evan Zhang
+// 23/06/2021
+
+#include <stdio.h>
+
+int main (void) {
+    int int1;
+    int int2;
+    
+    scanf("%d %d", &int1, &int2);
+    
+    int multiplied_int;
+    int1 * int2 = multiplied_int;
+    
+    if (multiplied_int < 0) {
+        multiplied_int = multiplied_int * (-1);
+        printf("%d\n", multiplied_int);
+    }
+    else if (multiplied_int == 0) {
+        printf("zero\n");
+    }
+    else {
+        printf("%d\n", multiplied_int);
+    }
+
+
+    return 0;
+}

@@ -1,0 +1,40 @@
+﻿# COMP3311 22T3 Final Exam Q8
+# Python/Psycopg2 analysis
+
+(A)
+Database connects.
+Query gets all terms that a student has finished a course in.
+For each term, prints the term and executes query 2.
+Query 2 finds all the related code, title, uoc and mark for each term (i.e. all course data for that term).
+
+Tot1 is total uoc accumulated.
+Tot2 is total uoc multiplied by the mark.
+
+The code then prints out the course code, title and uoc for each course taken by the student in that term (and does this for every term).
+
+Finally the code prints the total uoc*mark divided by total uoc (which is a roundabout way of printing the total cumulative mark of the student, which is not the WAM (e.g. my WAM is 74 but my total cumulative mark could be 800+)
+
+
+(B)
+Whether the student exists.
+Whether the student has not finished a term yet.
+Whether the student has not taken any courses → divide by zero in the last printf.
+
+
+(C)
+1 for getting all terms
+10 for each term.
+
+Therefore 11.
+
+
+(D)
+query = """
+select c.code, c.title, c.uoc, e.mark
+from   Enrolments e
+	join Courses c on (c.id=e.course)
+where  e.student = %s
+"""
+This would produce all course data related to a student. We do not need to execute a query per term.
+
+

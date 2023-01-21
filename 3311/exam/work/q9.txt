@@ -1,0 +1,33 @@
+﻿# COMP3311 22T3 Final Exam Q9
+# Serializabilty and Locking
+
+
+(A)
+First Lr is on different objects (not that it matters since it’s a read and multiple read locks can be put on an object).
+First R is on different objects.
+U unlocks different objects.
+Lw locks different objects.
+R reads different objects.
+W writes different objects which have been respectively locked.
+U unlocks the respectively locked objects.
+
+Therefore there are no conflicts and the concurrent schedule is conflict serializable.
+
+
+(B)
+Because the concurrent schedule is conflict serializable, it must be view serializable. 
+
+
+(C)
+Two phase locking is where all needed locks are acquired before any unlocks happen.
+Therefore the concurrent schedule without any changes demonstrates a two phase locking schedule.
+T1: Lr(Y) R(Y) U(Y) Lw(X) R(X) W(X) U(X)
+T2: Lr(X) R(X) U(X) LW(Y) R(Y) W(Y) U(Y)
+First phase is with both Lr and second phase is with both U. Another first phase begins with both Lw and second phase ends with both U again, demonstrating two, two-phase locking transactions.
+
+
+(D)
+
+Two phase locking along with regular locking produces the problem of starvation, where one transaction is permanantely waiting for another transaction to finish. It also introduces deadlock, where two transactions are both waiting for each other to finish.
+
+

@@ -1,0 +1,10 @@
+Question 1
+
+What is the time complexity of the algorithm? Justify your answer.
+
+O(nlog(n))
+
+This is because it will take O(~log(n)) separations until the problem is broken down into subproblems of one or zero. Each separation is O(~n) time. Problems are solved in constant time and
+then the same time is taken to combine until the original problem.
+So time taken should be around O(2*n*logn) or O(n*logn).d
+

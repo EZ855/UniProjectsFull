@@ -1,0 +1,12 @@
+// z5383657
+// Evan Zhang
+// 23/06/2021
+
+#include <stdio.h>
+
+int main (void) {
+    printf(":-/");    
+    
+    
+    return 0;
+}

@@ -1,0 +1,28 @@
+﻿# COMP3311 21T3 Final Exam Q10
+# BCNF normalization
+
+(A)
+ABCDEF, fds = A→BC, D→EF, key = AD
+
+
+
+(B)
+ABCDEF, fds = A→BC, D→EF, key = AD
+
+solve A→BC
+ABC, fds = A→BC, key = A, BCNF
+
+solve D->EF
+DEF, fds = D→EF, key = D, BCNF
+
+
+AD, fds = none, key = AD, BCNF
+
+
+(C)
+
+ABC table is the student and their PhD choice
+DEF is the supervisor and their specialty
+AD relates the student to their supervisor
+
+

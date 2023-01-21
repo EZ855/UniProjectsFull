@@ -1,0 +1,28 @@
+// exam_q8.c
+//
+// This program was written by z5383657
+// on 18/08/2021
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define MAX_WORD_LENGTH 100
+
+int main(void) {
+    int places_before = 0;
+    char word1[MAX_WORD_LENGTH];
+    char word2[MAX_WORD_LENGTH];
+    char storage[MAX_WORD_LENGTH] = {"example"};
+    int i = 0;
+    storage[i] = getchar();
+    i++;
+    while (storage[i] != EOF) {
+        storage[i] = getchar();
+        i++;
+    }
+    printf("%s", storage);
+    
+    
+    return 0;
+}

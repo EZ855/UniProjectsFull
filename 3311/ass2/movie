@@ -1,0 +1,74 @@
+#!/usr/bin/python3
+
+# COMP3311 22T3 Assignment 2
+# Print info about one movie; may need to choose
+
+import sys
+import psycopg2
+import helpers
+import re
+
+### Globals
+
+db = None
+usage = f"Usage: {sys.argv[0]} 'PartialMovieName'"
+
+### Command-line args
+
+if len(sys.argv) < 2:
+   print(usage)
+   exit(1)
+
+# process the command-line args ...
+
+movie = sys.argv[1]
+
+### Queries
+
+query1 = '''
+select M.title, M.year, M.id
+from Movies M
+where M.title ~* %s
+order by M.title, M.year
+'''
+
+### Manipulating database
+
+try:
+   # your code goes here
+
+   conn = psycopg2.connect("dbname=ass2")
+   db = conn.cursor()
+
+   db.execute(query1, [movie])
+
+   movies = db.fetchall()
+
+   if not movies:
+      print("No movie matching: '" + movie + "'")
+      exit(0)
+
+   numMovies = len(movies)
+
+   if numMovies == 1:
+      print(movies[0][0] + " (" + str(movies[0][1]) + ")")
+      helpers.printInfo(db, movies[0][2])
+      
+   else:
+      curMovie = 1
+      for movie in movies:
+         print(str(curMovie) + ". " + movie[0] + " (" + str(movie[1]) + ")")
+         curMovie += 1
+         
+      print("Which movie? ", end='')
+      selectedMovie = input()
+      selectedMovie = int(selectedMovie) - 1
+      print(movies[selectedMovie][0] + " (" + str(movies[selectedMovie][1]) + ")")
+      helpers.printInfo(db, movies[selectedMovie][2])
+
+except Exception as err:
+   print("DB error: ", err)
+finally:
+   if db:
+      db.close()
+

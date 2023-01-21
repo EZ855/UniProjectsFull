@@ -1,0 +1,6 @@
+int main(int argc, char *argv[]) {
+
+    printf("%d", 0x80);
+    
+    return 0;
+}

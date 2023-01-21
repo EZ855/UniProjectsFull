@@ -1,0 +1,98 @@
+// BFS maze solver
+
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include "Cell.h"
+#include "helpers.h"
+#include "Maze.h"
+#include "Queue.h"
+
+bool solve(Maze m) {
+    // TODO: Complete this function
+    //       Feel free to add helper functions
+    
+    // Getting dimensions of maze
+    int maze_rows = MazeHeight(m);
+    int maze_cols = MazeWidth(m);
+    
+    // Each cell stores whether it has been visited
+    bool **bool_mat = createBoolMatrix(maze_rows, maze_cols);
+    // Each cell stores parent of cell
+    Cell **cell_mat = createCellMatrix(maze_rows, maze_cols);
+    
+    Queue q = QueueNew();
+    
+    Cell current = MazeGetStart(m);
+    
+    QueueEnqueue(q, current);
+    
+    bool exit_found = false;
+    
+    // while queue is not empty
+    while(QueueSize(q)) {
+        // Gets first in queue
+        current = QueueDequeue(q);
+        // checks if it has been visited or is a wall
+        if (!MazeIsWall(m, current) && !bool_mat[current.row][current.col]) {
+            // visits cell, if it is the exit, exits while loop and sets exit_found to true
+            if (MazeVisit(m, current)) {
+                exit_found = true;
+                break;
+            }
+            
+            Cell tmp;
+
+            // adds cells above, left, below and right to queue and sets their parent cell to current in cell_mat
+            // does this only if it has not been visited before and it is in maze
+            if (current.row - 1 >= 0 && !bool_mat[current.row - 1][current.col]) {
+                tmp.row = current.row - 1;
+                tmp.col = current.col;
+                cell_mat[tmp.row][tmp.col] = current;
+                QueueEnqueue(q, tmp);
+            }
+            if (current.col - 1 >= 0 && !bool_mat[current.row][current.col - 1]) {
+                tmp.row = current.row;
+                tmp.col = current.col - 1;
+                cell_mat[tmp.row][tmp.col] = current;
+                QueueEnqueue(q, tmp);
+            }
+            if (current.row + 1 < maze_rows && !bool_mat[current.row + 1][current.col]) {
+                tmp.row = current.row + 1;
+                tmp.col = current.col;
+                cell_mat[tmp.row][tmp.col] = current;
+                QueueEnqueue(q, tmp);
+            }
+            if (current.col + 1 < maze_cols && !bool_mat[current.row][current.col + 1]) {
+                tmp.row = current.row;
+                tmp.col = current.col + 1;
+                cell_mat[tmp.row][tmp.col] = current;
+                QueueEnqueue(q, tmp);
+            }
+        }
+        bool_mat[current.row][current.col] = true;
+    }
+    
+    if (exit_found) {
+        Cell start = MazeGetStart(m);
+        while (current.row != start.row && current.col != start.col) {
+            MazeMarkPath(m, current);
+            current = cell_mat[current.row][current.col];
+        }
+        MazeMarkPath(m,current);
+        MazeMarkPath(m, start);
+        
+        freeBoolMatrix(bool_mat);
+        freeCellMatrix(cell_mat);
+        QueueFree(q);
+        return true;
+    }
+    
+    freeBoolMatrix(bool_mat);
+    freeCellMatrix(cell_mat);
+    QueueFree(q);
+    return false;
+}
+

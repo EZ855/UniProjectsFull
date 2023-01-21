@@ -1,0 +1,97 @@
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char*argv[]) {
+    if (argc <= 0) {
+        printf("Wrong number of arguments.\n");
+        return 0;
+    }
+    for (int arg = 1; arg < argc; arg++) {
+        struct stat s;
+        if (stat(argv[arg], &s) != 0) {
+            perror(argv[arg]);
+            exit(1);
+            
+        }
+        if((0120000 & s.st_mode) == 0120000) {
+            printf("l");
+        }
+        else if(0100000 & s.st_mode) {
+            printf("-");
+        }
+        else if((0060000 & s.st_mode) == 0060000) {
+            printf("b");
+        }
+        else if(0040000 & s.st_mode) {
+            printf("d");
+        }
+        else if(0020000 & s.st_mode) {
+            printf("c");
+        }
+        else if(0010000 & s.st_mode) {
+            printf("p");
+        }
+        if(0000400 & s.st_mode) {
+            printf("r");
+        }
+        else {
+            printf("-");
+        }
+        if(0000200 & s.st_mode) {
+            printf("w");
+        }
+        else {
+            printf("-");
+        }
+        if(0000100 & s.st_mode) {
+            printf("x");
+        }
+        else {
+            printf("-");
+        }
+        if(0000040 & s.st_mode) {
+            printf("r");
+        }
+        else {
+            printf("-");
+        }
+        if(0000020 & s.st_mode) {
+            printf("w");
+        }
+        else {
+            printf("-");
+        }
+        if(0000010 & s.st_mode) {
+            printf("x");
+        }
+        else {
+            printf("-");
+        }
+        if(0000004 & s.st_mode) {
+            printf("r");
+        }
+        else {
+            printf("-");
+        }
+        if(0000002 & s.st_mode) {
+            printf("w");
+        }
+        else {
+            printf("-");
+        }
+        if(0000001 & s.st_mode) {
+            printf("x");
+        }
+        else {
+            printf("-");
+        }
+        printf(" %s\n", argv[arg]);
+
+    }
+
+    
+    return 0;
+}

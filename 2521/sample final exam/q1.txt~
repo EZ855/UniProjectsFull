@@ -1,0 +1,8 @@
+Question 1
+
+What is the time complexity of the algorithm? Justify your answer.
+
+O(nlog(n))
+
+This is because it will take O(log(n))  the problem is broken down into subproblems of one or zero
+

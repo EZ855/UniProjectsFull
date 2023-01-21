@@ -1,0 +1,23 @@
+// Swap bytes of a short
+
+#include <stdint.h>
+#include <stdlib.h>
+#include <assert.h>
+
+// given uint16_t value return the value with its bytes swapped
+uint16_t short_swap(uint16_t value) {
+
+    uint16_t new_number = 0x0000;
+    
+    for (int i = 0; i < 2; i++) {
+        uint16_t temporary = 0x00FF;
+        temporary = (temporary << 8 * i) & value;
+        if (i == 0) {
+            new_number = new_number | (temporary << 8 * (2 - i));
+        }
+        else {
+            new_number = new_number | (temporary >> 8);
+        }
+    }
+    return new_number;
+}

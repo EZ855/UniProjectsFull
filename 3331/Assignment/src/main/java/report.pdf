@@ -1,0 +1,17 @@
+3331 Report:
+Server.java ?? contains the server class
+-	Login ?? creates userlog.txt
+-	BCM - creates messagelog.txt
+-	ATU ?? checks userlog.txt
+-	SRB ?? creates SR_i_messagelog.txt, which contains the users as the first line
+-	SRM ?? messages SR_i_messagelog.txt
+-	RDM ?? gets messages
+-	OUT ?? removes user from userlog.txt
+-	UPD ?? gets ip and UDP port of specified user (UDP port stored in usernameport.txt)
+Client.java ?? contains the client class
+-	OUT ?? closes connection
+-	UPD ?? not finished.
+I could have separated my code more so it isn??t just two large files. Could have also started earlier so I could finish the UDP section, which took longer than anticipated.
+I used the sample TCPClient.java and TCPServer.java written by Wei Song from https://webcms3.cse.unsw.edu.au/COMP3331/22T2/resources/75938
+
+
