@@ -1,0 +1,72 @@
+.recWrapper { 
+    padding: 20px;
+    display: flex;
+    }
+.leftCol {
+    width: 30%;
+    box-shadow: 2px 4px 4px -1px rgba(0, 0, 0, 0.1);
+  }
+.rightCol {
+    box-shadow: 2px 4px 4px -1px rgba(0, 0, 0, 0.1);
+    padding-left: 20px;
+    width: 70%;
+  }
+
+.rec_deet {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    padding-left: 4px;
+}
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.user_button {
+    background-color: white; /* Green */
+    border: 2px solid #EE5837;
+    border-radius: 30px;
+    color: #EE5837;
+    padding: 12px 25px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+.user_button:hover {
+    background-color: #EE5837;
+    color:white;
+  }
+.like_button {
+    background-color: white;
+    border: none;
+    padding: 5px;
+}
+.count_likes {
+    padding: 5px;
+}
+.rec_heading {
+    font-weight: bold;
+    color: #EE5837;
+    padding: 4px;
+}
+.rec_title {
+    font-family: cursive, Tahoma, Geneva, sans-serif;
+}
+.food_image {
+    width: 345px;
+    height: 345px;
+}
+.left_recommend {
+    width: 50%
+}
+.right_recommend {
+    width: 50%
+}
+.commentBox {
+    display: flex;
+}
+.comment {
+    font-weight: bold;
+    padding: 0px;
+}

@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.createRecipeBox {
+    /* grid-area: 2/2/5/5;*/
+     display: flex;
+     background-color: #FFFCF1;
+     flex-direction: column;
+     justify-content: center;
+     padding: 75px 150px 75px 150px;
+     border: solid 2px #EE5837;
+     width: 900px;
+     min-width: 900px;
+}
+
+.tags-input-container{
+    border: 1px solid rgb(219, 219, 219);
+    background-color: white;
+    padding: .5em;
+    border-radius: 3px;
+    width: min(80vw, 400px);
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5em;
+}
+
+.tag-item{
+    background-color: #ff876c;
+    display: inline-block;
+    padding: .5em .75em;
+    border-radius: 20px;
+    color:#000000;
+}
+.tag-item .close{
+    height: 20px;
+    width: 20px;
+    background-color: #EE5837;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: .5em;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.tags-input{
+    flex-grow: 1;
+    padding: .5em 0;
+    border: none;
+    outline: none;
+}
+.tag-item .close:hover {
+    background-color: white;
+    color:#EE5837;
+  }
+.methodBox { 
+    border: 1px solid rgb(219, 219, 219);
+    padding: 2px;
+    min-Height: 400px;
+    min-width: 400px;
+    background-color: white;
+}
+.crBoxBorder {
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 5px;
+}
+.crIngredientContainer {
+    min-width: 275px;
+    max-width: 275px;
+    min-height: 70px;
+    max-height: 70px;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.crFormSize {
+    min-height: 30px;
+    max-height: 30px;
+}
+.deleteButton {
+    min-width: 50px;
+    max-width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 0, 0);
+    border-color: red;
+    color: white;
+    cursor: pointer;
+    font-family: "Amazon Ember",sans-serif;
+    font-size: medium;
+}

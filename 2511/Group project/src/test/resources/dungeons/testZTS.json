@@ -1,0 +1,23 @@
+{
+  "entities": [
+    {
+      "type" : "player",
+      "x" : 2,
+      "y" : 2
+    }, {
+      "type" : "zombie_toast_spawner",
+      "x" : 3,
+      "y" : 3
+    }, {
+      "type" : "sword",
+      "x" : 2,
+      "y" : 3
+    },
+    {
+      "type" : "exit",
+      "x" : 6,
+      "y" : 2
+    }
+  ],
+  "goal-condition": {"goal": "exit"}
+}

@@ -1,0 +1,48 @@
+.list_div {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem;
+	margin-top: 1.25rem;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    border-radius: 0.75rem;
+}
+.image_div {
+    position:relative;
+    height: 4rem;
+    width: 4rem;
+    margin-right: 1rem;
+}
+
+.list_div:hover {
+    background-color: #EE5837;
+    color:white;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition-duration: 0.2s;
+  }
+
+.item {
+    margin: 0.5rem;
+	margin-top: 1.25rem;
+    margin-left: 1.25rem;
+}
+
+.image_div img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 15px;
+    margin-top: -10px;
+}
+/* .food_thumbnail {
+    
+} */

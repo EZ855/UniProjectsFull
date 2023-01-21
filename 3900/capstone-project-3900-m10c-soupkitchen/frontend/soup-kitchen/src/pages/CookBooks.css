@@ -1,0 +1,224 @@
+.overall_cookbook_container {
+    margin-left: 5%;
+    margin-right: 5%;
+    max-height: 1005px;
+    min-height: 1005px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    overflow: hidden;
+    display: flex;
+}
+
+.cook_content {
+    width: 7000px;
+    background-color: #ccc;
+}
+.cookbookScrollButtonLeft {
+    margin: 0;
+    position: absolute;
+    top: 700px;
+    left: 6%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    align-items: space-between;
+  }
+.cookbookScrollButtonRight {
+    margin: 0;
+    position: absolute;
+    top: 700px;
+    right: 10%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.cookbookButton {
+    width:0;
+    background-color: #FFFFFF;
+    color: grey;
+    border: none;
+    text-align: center;
+    opacity: 0.6;
+    transition: 0.3s;
+    font-size: 50px;
+}
+.cookbookButton:hover {
+    opacity: 0.8;
+}
+
+.cookbookTitle {
+    margin-left: 5%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #000000;
+}
+.cookbook_container {
+    background-color: white;
+    min-height: 985px;
+    max-height: 985px;
+    min-width: 350px;
+    border-radius: 25px;
+    border: 2px solid grey;
+}
+.newCB {
+    background-color: #8b8b8b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 970px;
+    max-height: 970px;
+    min-width: 330px;
+    max-width: 350px;
+    border-radius: 25px;
+    margin: 4px 5px 4px 5px;
+    cursor: pointer;
+    align-self: center;
+    transition: 0.3s;
+}
+.newCB:hover {
+    background-color: #EE5837;
+}
+.newCBText {
+    color: white;
+    text-align: center;
+}
+.cookbooksHeader {
+    display: flex;
+}
+.cookbooksSingleHeader {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3%;
+    cursor: pointer;
+    font-size: x-large;
+}
+.new_cookbook_button {
+    background-color: #EE5837; /* Green */
+    border: 2px solid #EE5837;
+    color: black;
+    padding: 12px 25px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+.cbsUsername{
+    margin-left: 5%;
+    margin-right: 5%;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.cbsUsername:hover {
+    color: #EE5837;
+}
+.deleteButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    border-color: red;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-family: "Amazon Ember",sans-serif;
+    width: 150px;
+    height: 40px;
+    font-size: medium;
+}
+.cancelButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-color: grey;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    font-family: "Amazon Ember",sans-serif;
+    width: 90px;
+    height: 40px;
+    font-size: medium;
+}
+.saveButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    border-color: green;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-family: "Amazon Ember",sans-serif;
+    width: 90px;
+    height: 40px;
+    font-size: medium;
+}
+.addRecipes {
+    background-color: #8b8b8b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    max-height: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+    align-self: center;
+    transition: 0.3s;
+}
+.addRecipes:hover {
+    background-color: #EE5837;
+}
+.addRecipesText {
+    color: white;
+    text-align: center;
+    font-size: medium;
+}
+.addRecipesEnd {
+    background-color: #8b8b8b;
+    min-height: 50px;
+    max-height: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+    align-self: center;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+}
+.addRecipesEnd:hover {
+    background-color: #EE5837;
+}
+.addRecipesEndText {
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+}
+.cbTitleInput{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3%;
+    font-size: x-large;
+    max-width: 310px;
+}
+.addCookBookContainer {
+    display: flex;
+    flex-direction: column;
+}
+.cbAddButtons {
+    margin-left: 5%;
+    margin-top: 10%;
+}
+.cbsbox {
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.cbsbox:hover {
+    background-color: #8b8b8b;
+}

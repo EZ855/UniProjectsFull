@@ -1,0 +1,74 @@
+.formWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 50px;
+}
+
+.formBox {
+   /* grid-area: 2/2/5/5;*/
+    display: flex;
+    background-color: #FFFCF1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px;
+    border: solid 2px #EE5837;
+    min-width: 450px;
+}
+.logo {
+   /* grid-area: 1/2/2/3;*/
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+    width: 150px;
+    cursor:pointer;
+    left: 20px;
+}
+.login_button {
+    background-color: white; /* Green */
+    border: 2px solid #EE5837;
+    border-radius: 30px;
+    color: black;
+    width: 250px;
+    min-width: 250px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+.other_button {
+    background-color: #EE5837; /* Green */
+    border: 2px solid #EE5837;
+    color: black;
+    padding: 12px 25px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+.logo {
+    align-self: flex-start;
+}
+.logo:hover {
+    transform: scale(1.2);
+    transition-duration: 0.2s;
+  }
+.forms {
+    width: 250px;
+    min-width: 250px;
+}
+.logTitle {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #EE5837;
+}
+.loginTxt {
+    padding: 10px;
+}

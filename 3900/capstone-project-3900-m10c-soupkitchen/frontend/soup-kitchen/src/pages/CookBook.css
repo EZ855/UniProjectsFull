@@ -1,0 +1,175 @@
+.cookbookTitle {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #000000;
+    margin-left: 5%;
+}
+.cookbookHeader {
+    display: absolute;
+    left: 5%;
+}
+.cbButtonSpan {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 60%;
+    top: 8%;
+}
+.cbUsername {
+    cursor: pointer;
+    margin-left: 5%;
+}
+.cbButtonContainer {
+    border: white;
+    background-color: white;
+}
+.subButton {
+  background-color: rgb(88, 88, 88);
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  box-sizing: border-box;
+  color: rgb(230, 230, 230);
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Amazon Ember",sans-serif;
+  font-size: 13px;
+  line-height: 29px;
+  padding: 0 10px 0 11px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: 100px;
+  font-weight: 600;
+  margin: 0;
+  outline: none;
+  touch-action: manipulation;
+  transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+}
+
+.subButton:focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow .2s;
+}
+
+.subButton:active {
+  background-color: rgb(88, 88, 88);
+  transform: scale(.96);
+}
+
+.subButton:disabled {
+  border-color: #DDDDDD;
+  color: #DDDDDD;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+.unsubButton {
+    background-color: white;
+    border: 1px solid #d5d9d9;
+    border-radius: 8px;
+    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+    box-sizing: border-box;
+    color: #0f1111;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Amazon Ember",sans-serif;
+    font-size: 13px;
+    line-height: 29px;
+    padding: 0 10px 0 11px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    width: 100px;
+    font-weight: 600;
+    margin: 0;
+    outline: none;
+    transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+}
+
+.unsubButton:focus-visible {
+    box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+    transition: box-shadow .2s;
+}
+
+.unsubButton:active {
+    background-color: #FFFFFF;
+    transform: scale(.96);
+}
+
+.unsubButton:disabled {
+    border-color: #DDDDDD;
+    color: #DDDDDD;
+    cursor: not-allowed;
+    opacity: 1;
+}
+
+.cbdeleteButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    border-color: red;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-family: "Amazon Ember",sans-serif;
+    width: 150px;
+    height: 40px;
+    font-size: medium;
+}
+.cancelButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-color: grey;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    font-family: "Amazon Ember",sans-serif;
+    width: 90px;
+    height: 40px;
+    font-size: medium;
+}
+.saveButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    border-color: green;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-family: "Amazon Ember",sans-serif;
+    width: 90px;
+    height: 40px;
+    font-size: medium;
+}
+.cbCard {
+    touch-action: manipulation;
+}
+.cbCard:focus {
+    background-color: #EE5837;
+}
+.cbUsername{
+    margin-left: 5%;
+    margin-right: 5%;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.cbUsername:hover {
+    color: #EE5837;
+}

@@ -1,0 +1,21 @@
+
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+
+.main {
+    padding: 5px;
+    background-color: white;
+    width: 70%;
+    height: 150vh;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+
+    }

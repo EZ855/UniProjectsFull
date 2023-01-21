@@ -1,0 +1,57 @@
+.signupTitle {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #EE5837;
+    font-size: larger;
+}
+
+.signupBody {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #FF9179;
+    font-size: medium;
+}
+
+.important {
+    color: #FF0000;
+}
+
+.returnButton {
+    color: #FFFFFF;
+    width: 55px;
+    padding: 8px 5px;
+    margin: 2px 2px;
+    font-size: x-large;
+    align-self: flex-start;
+}
+
+.signupFormBox {
+    /* grid-area: 2/2/5/5;*/
+     display: flex;
+     background-color: #FFFCF1;
+     flex-direction: column;
+     justify-content: center;
+     padding: 75px;
+     border: solid 2px #EE5837;
+     width: 700px;
+     min-width: 700px;
+}
+.forms {
+    align-self: center;
+}
+.submitButton {
+    align-self: center;
+    width: 250px;
+}
+.alert {
+    padding: 15px;
+    border: solid 2px #ff1100;
+    background-color: white;
+    color: #ff1100;
+    font-size: medium;
+  }
+.alert_orange{
+    padding: 15px;
+    border: solid 2px #ff7300;
+    background-color: white;
+    color: #ff7300;
+    font-size: medium;
+  }

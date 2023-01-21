@@ -1,0 +1,25 @@
+[ {
+    "name": "Pizza",
+    "meal_type": "dinner",
+    "tags": ["italian", "fastfood", "cheesy"],
+    "ingredients": ["base", "cheese", "tomato paste", "pepperoni"],
+    "method": ["Put tomato on base", "Add toppings", "Put in oven"],
+    "photo": null,
+    "likes": 100,
+    "comments": 10,
+    "author_id": "a1",
+    "liked": true
+    },
+    {
+    "name": "Pie",
+    "meal_type": "dinner",
+    "tags": ["aussie", "fastfood", "meaty"],
+    "ingredients": ["meat", "pastry", "tomato sauce"],
+    "method": ["Put meat in pastry", "Put in oven"],
+    "photo": null,
+    "likes": 200,
+    "comments": 20,
+    "author_id": "b1",
+    "liked": true
+    }
+]

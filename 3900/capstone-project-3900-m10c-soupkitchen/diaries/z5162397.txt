@@ -1,0 +1,68 @@
+
+z5162397.txt
+
+update this file every week with your new
+contributions to the team and the project.
+You should include in this diary the following information (if applicable) about the
+project progress:
+- what was planned for the period since the last work diary entry
+- what was finished
+- what were the main technical and non-technical obstacles and how they were
+overcome (or what was tried and did not work)
+- what was not finished, why this happened, how this affects the overall project
+progress and what adjustments (if any) are needed so the success of the project is not
+endangered
+- what is planned for the next period (e.g., next week)
+
+Week 1:
+Still in Turkey until Tuesday Week 2. Boaz and I have been in touch about ideas for the project, we will soon create a shortlist
+of our preferred apps. We discussed what we have experience in, and so far a stack of Apache Lucene for search, Java backend, React and TypeScript frontend is
+what we're thinking of working with. We are still waiting on replies from other group members. Currently TODO is setting up communications (likely Discord), 
+Jira and github, as well as connecting our accounts to github classroom.  
+
+Week 2:
+Our group is more established now, we have decided on doing the recipe project. The Soup Kitchen discord is active, & we have started 
+collaborative documents for the idea board, user stories and user flow diagrams. We still need to decide on a plan for the API, perhaps Springboot. 
+Boaz has suggested making a google form we can share for friends to submit recipes that we can populate the database with - otherwise we will most
+likely find a dataset that can be adjusted to add tags / meal types etc. 
+We have allocated roles but still need to decide who will be helping me on the frontend. The main task for this week is writing the proposal, & 
+making sure we are on the same page for objectives -> epics -> user stories etc. I will be making wireframes on Figma starting next week. 
+Current plan for novel ideas is cookbooks and an extended recommendation system. 
+
+Week 3:
+We have made some progress on the user stories, although need to update it for our new novel idea: drink recommendations. Dylan approved the idea, 
+we still need to flesh out the functionality. I've made several wireframes, although they are too detailed and I need to focus on concise, communicative
+diagrams. We realised we have not attached any user story ids to wireframes / user flows, so that will be a priority before the demo next week. 
+I've started a basic home page with react, and am trying to separate as much as possible into simple components - this should give us a good amount of reusable
+code and make it simpler for whoever is helping me on the frontend. 
+
+Week 4:
+Finished login, landing and feed. The auth on the backend still needs some updating to show names/emails are taken. 
+Landing displays dummy recipes but cannot show a feed yet. We need to start integrating basic auth to be able to effectively start working 
+on other features in the next sprint. 
+
+Week 5:
+First demo went okay, although I could not be present. We had to use our Jira more effectively and set weekly meetings to ensure we stay
+on track. 
+
+Week 6:
+Flex week, was mostly working/away.
+Friday meetings are consistent and we are keen to start on the next sprint. Backend has started working on recipe functionality 
+and we are hoping to move away from using dummy databases on the frontend. 
+
+Week 7:
+The frontend is looking a lot cleaner, we have been using the wireframes effectively. Organisation is still an issue, and we are behind in
+integrating. Working on multiple features at the same time is difficult. Api is looking great and is extremely useful for ensuring
+we are fetching and receiving correctly between the backend and frontend. 
+
+Week 8:
+Had conversation with team about ids and login/logout. Integrating is finally happening with some success, although we are 
+suffering some consequences from starting new features before previous ones are implemented. 
+
+Week 9:
+Moving towards final demo, integration is in full swing. Can log in, log out, display recipes and view users. Having some trouble implementing 
+cookbooks. Having pages and components effectively separated has been very helpful for fixing bugs. 
+
+Week 10: 
+Final demo was okay, however some git troubles meant the wrong version was being used in the demo. This week will be smoothing out a lot of 
+small bugs and refining the css on the frontend. 

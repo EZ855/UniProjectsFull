@@ -1,0 +1,280 @@
+{
+    "token":"what",
+    "recipes":[
+        {
+            "name":"Spicy butter chicken",
+            "is_published":"1",
+            "meal_type":"dinner",
+            "photo":"none of your beeswax",
+            "image":"this can work!!!!",
+            "ingredients":[{"name":"chicken", "quantity":"1", "units":"kg"}, {"name":"yogurt", "quantity":"500", "units":"g"}, {"name":"tomato", "quantity":"500", "units":"g"}, {"name":"cumin", "quantity":"20", "units":"g"}, {"name":"onion", "quantity":"200", "units":"g"}, {"name":"garlic", "quantity":"500", "units":"g"}],
+            "methods":"Marinate Chicken in yogurt, cumin and salt. Brown onions on stove. Preheat pan. etc",
+            "tags":["indian","chicken","curry"],
+            "equipments":["stove","knife"]
+        },
+        {
+            "name":"Chocolate lava cake",
+            "is_published":"1",
+            "meal_type":"snack",
+            "photo":"none of your beeswax",
+            "image":"this can work!!!!",
+            "ingredients":[{"name":"chocolate", "quantity":"1", "units":"kg"}, {"name":"milk", "quantity":"500", "units":"g"}, {"name":"butter", "quantity":"500", "units":"g"},{"name":"egg", "quantity":"200", "units":"g"}, {"name":"coco powder", "quantity":"500", "units":"g"}],
+            "methods":"mix till homogenized. put chocolate in middle then bake",
+            "tags":["heart-warming","chocolate","yum"],
+            "equipments":["standmix","oven"]
+        },
+        {
+            "name":"Maria's avocado toast",
+            "is_published":"1",
+            "meal_type":"lunch",
+            "photo":"none of your beeswax",
+            "image":"this can work!!!!",
+            "ingredients":[{"name":"Avocado", "quantity":"150", "units":"g"}, {"name":"bread", "quantity":"200", "units":"g"}, {"name":"mixed spices", "quantity":"5", "units":"g"}, {"name":"salt", "quantity":"5", "units":"g"}],
+            "methods":"Smash avocado. Toast bread then serve appropriately",
+            "tags":["vegan","green","health"],
+            "equipments":["fork","knife"]
+        },
+        {
+            "name":"Spaghetti",
+            "is_published":"1",
+            "meal_type":"dinner",
+            "photo":"none of your beeswax",
+            "image":"this can work!!!!",
+            "ingredients":[{"name":"beef mince", "quantity":"1", "units":"kg"}, {"name":"canned tomatoes", "quantity":"500", "units":"g"}, {"name":"onion", "quantity":"200", "units":"g"}, {"name":"celery", "quantity":"200", "units":"g"}, {"name":"carrot", "quantity":"200", "units":"g"},{"name":"garlic", "quantity":"50", "units":"g"}, {"name":"pasta", "quantity":"500", "units":"g"}, {"name":"mozzerella cheese", "quantity":"200", "units":"g"}],
+            "methods":"Cook down for a long time. Make pasta, grate cheese",
+            "tags":["italian","european","herby","back to basics","easy food"],
+            "equipments":["stove","grater", "knife"]
+        },
+        {
+            "name":"Pot pie",
+            "is_published":"1",
+            "meal_type":"dinner",
+            "photo":"none of your beeswax",
+            "image":"this can work!!!!",
+            "ingredients":[{"name":"beef mince", "quantity":"1", "units":"kg"}, {"name":"onion", "quantity":"500", "units":"g"}, {"name":"pastry", "quantity":"500", "units":"g"}],
+            "methods":"cook meat. put in tray. Cover in lush pastry then bake",
+            "tags":["hearty","meat","British","european"],
+            "equipments":["stove","oven"]
+        },
+        {
+            "name":"Tomato fried egg",
+            "is_published":"1",
+            "meal_type":"dinner",
+            "photo":"none of your beeswax",
+            "image":"this can work!!!!",
+            "ingredients":[{"name":"eggs", "quantity":"500", "units":"g"}, {"name":"tomato", "quantity":"500", "units":"g"}, {"name":"garlic", "quantity":"20", "units":"g"}, {"name":"water", "quantity":"100", "units":"g"},{"name":"salt", "quantity":"20", "units":"g"}, {"name":"sugar", "quantity":"20", "units":"g"}],
+            "methods":"cut and fry everything",
+            "tags":["chinese","vegetarian","asian"],
+            "equipments":["stove","knife"]
+        },
+        {
+            "name":"egg fried rice",
+            "is_published":"1",
+            "meal_type":"lunch",
+            "photo":"none of your beeswax",
+            "image":"this can work!!!!",
+            "ingredients":[{"name":"rice", "quantity":"1", "units":"kg"}, {"name":"egg", "quantity":"500", "units":"g"}, {"name":"garlic", "quantity":"50", "units":"g"}],
+            "methods":"fry the rice, how hard can it be",
+            "tags":["chinese","asian","riceislife"],
+            "equipments":["stove","chopsticks"]
+        },
+        {
+            "name":"Korean fried chicken",
+            "is_published":"1",
+            "meal_type":"dinner",
+            "photo":"none of your beeswax",
+            "image":"this can work!!!!",
+            "ingredients":[{"name":"chicken", "quantity":"1", "units":"kg"}, {"name":"flour", "quantity":"500", "units":"g"}, {"name":"gochujang", "quantity":"200", "units":"g"}, {"name":"mixed spices", "quantity":"100", "units":"g"}],
+            "methods":"dredge and fry, toss in gochujang, make it tasty",
+            "tags":["korean","asian","soul-food"],
+            "equipments":["deep frier","bowl"]
+        },
+        {
+            "name":"Bubble tea",
+            "is_published":"1",
+            "meal_type":"drink",
+            "photo":"none of your beeswax",
+            "image":"this can work!!!!",
+            "ingredients":[{"name":"tapioca pearls", "quantity":"100", "units":"g"}, {"name":"milk", "quantity":"500", "units":"ml"}, {"name":"tea leaves", "quantity":"50", "units":"g"}, {"name":"water", "quantity":"1", "units":"litre"}, {"name":"sugar", "quantity":"200", "units":"g"}],
+            "methods":"boil water, cook pearls, steep tea and mix it all up",
+            "tags":["asiant","boba","asian anthem"],
+            "equipments":["stove"]
+        },
+        {
+            "name":"Green Mandarin Tea",
+            "is_published":"1",
+            "meal_type":"drink",
+            "photo":"none of your beeswax",
+            "image":"this can work!!!!",
+            "ingredients":[{"name":"mandarin", "quantity":"1", "units":"kg"}, {"name":"sugar", "quantity":"500", "units":"g"}, {"name":"water", "quantity":"2000", "units":"g"}],
+            "methods":"candy mandarin then mix with water",
+            "tags":["korean","asian","citrus"],
+            "equipments":["standmix","oven"]
+        },
+        {
+            "name":"Pizza",
+            "is_published":"1",
+            "meal_type":"dinner",
+            "photo":"none of your beeswax",
+            "image":"this can work!!!!",
+            "ingredients":[{"name":"flour", "quantity":"1", "units":"kg"}, {"name":"egg", "quantity":"500", "units":"g"}, {"name":"yeast", "quantity":"50", "units":"g"}, {"name":"water", "quantity":"500", "units":"g"}, {"name":"cheese", "quantity":"500", "units":"g"}, {"name":"tomato paste", "quantity":"50", "units":"g"}, {"name":"salami", "quantity":"200", "units":"g"}],
+            "methods":"make dough, stretch it real good, put toppings, bake",
+            "tags":["italian","baked","european"],
+            "equipments":["knife","oven"]
+        },
+        {
+            "name":"Kimchi fried rice",
+            "is_published":"1",
+            "meal_type":"dinner",
+            "photo":"none of your beeswax",
+            "image":"this can work!!!!",
+            "ingredients":[{"name":"kimchi", "quantity":"500", "units":"g"}, {"name":"spam", "quantity":"250", "units":"g"}, {"name":"crab stick", "quantity":"2", "units":"50g"}],
+            "methods":"fried everything together",
+            "tags":["Korea","Fried rice","spicy"],
+            "equipments":["pan","wok"]
+        },
+        {
+            "name":"Carbonara",
+            "is_published":"1",
+            "meal_type":"dinner",
+            "photo":"none of your beeswax",
+            "image":"this can work!!!!",
+            "ingredients":[{"name":"Spaghetti", "quantity":"100", "units":"g"}, {"name":"cheese", "quantity":"50", "units":"g"}, {"name":"egg york", "quantity":"1", "units":"piece"}],
+            "methods":"boil water, cook spaghetti, mix with egg york and cheese",
+            "tags":["italian","Spaghetti","yum"],
+            "equipments":["pan"]
+        },
+        {
+            "name":"Garlic oil spagetti",
+            "is_published":"1",
+            "meal_type":"dinner",
+            "photo":"none of your beeswax",
+            "image":"this can work!!!!",
+            "ingredients":[{"name":"garlic", "quantity":"10", "units":"cloths"}, {"name":"oil", "quantity":"20", "units":"g"}, {"name":"Spaghetti", "quantity":"120", "units":"g"}],
+            "methods":"cook spaghetti, fried garlic with oil and mix together",
+            "tags":["italian","easy","yum"],
+            "equipments":["pan"]
+        },
+        {
+            "name":"French Toast",
+            "is_published":"1",
+            "meal_type":"breakfast",
+            "photo":"ignore",
+            "image":"ignore",
+            "ingredients":[{"name":"egg", "quantity":"200", "units":"g"}, {"name":"milk", "quantity":"4", "units":"tbsp"}, {"name":"cinnamon", "quantity":"1", "units":"tsp"},{"name":"vanilla essence", "quantity":"1", "units":"tsp"}, {"name":"brown sugar", "quantity":"1", "units":"tsp"}, {"name":"salt and pepper", "quantity":"10", "units":"g"}, {"name":"bread", "quantity":"4", "units":"slices"}, {"name":"butter", "quantity":"2", "units":"tbsp"}],
+            "methods":"Mix the egg, milk, cinnamon, vanilla essence, sugar, salt and pepper. Lightly soak the bread slices on each side. Melt some butter in a pan and fry the bread. Serve with maple syrup and bacon",
+            "tags":["brunch","better with bacon","delicious"],
+            "equipments":["bowl","fry pan","stove","egg flipper"]
+        },
+        {
+            "name":"rice",
+            "is_published":"1",
+            "meal_type":"dinner",
+            "photo":"rice.jpg",
+            "image":"rice_2.jpg",
+            "ingredients":[{"name":"rice", "quantity":"1", "units":"kg"}, {"name":"water", "quantity":"1", "units":"kg"}],
+            "methods":"cook rice. overdose on copium",
+            "tags":["staple","asian"],
+            "equipments":["stove","pot"]
+        },
+        {
+            "name":"Egg on toast",
+            "is_published":"1",
+            "meal_type":"breakfast",
+            "photo":"rice.jpg",
+            "image":"rice_2.jpg",
+            "ingredients":[{"name":"egg", "quantity":"100", "units":"g"}, {"name":"bread", "quantity":"100", "units":"g"}],
+            "methods":"fry egg, toast bread",
+            "tags":["breakfast","uni student"],
+            "equipments":["stove","pan"]
+        },
+        {
+            "name":"Banana smoothie",
+            "is_published":"1",
+            "meal_type":"drink",
+            "photo":"rice.jpg",
+            "image":"rice_2.jpg",
+            "ingredients":[{"name":"banana", "quantity":"200", "units":"g"}, {"name":"milk", "quantity":"300", "units":"g"}],
+            "methods":"blend it real good",
+            "tags":["breakfast","fruity"],
+            "equipments":["blender"]
+        },
+        {
+            "name":"Beer",
+            "is_published":"1",
+            "meal_type":"drink",
+            "photo":"rice.jpg",
+            "image":"rice_2.jpg",
+            "ingredients":[{"name":"wheat", "quantity":"100", "units":"g"}, {"name":"yeast", "quantity":"100", "units":"g"}, {"name":"water", "quantity":"100", "units":"g"}],
+            "methods":"ferment and purify",
+            "tags":["american","alcohol","australian","pub","uni student"],
+            "equipments":["stove","pan"]
+        },
+        {
+            "name":"Chicken schnitzel",
+            "is_published":"1",
+            "meal_type":"dinner",
+            "photo":"rice.jpg",
+            "image":"rice_2.jpg",
+            "ingredients":[{"name":"chicken", "quantity":"200", "units":"g"}, {"name":"breading", "quantity":"100", "units":"g"}, {"name":"salt", "quantity":"10", "units":"g"}],
+            "methods":"bread and deep fry",
+            "tags":["american","european","australian","pub","uni student"],
+            "equipments":["stove","pan","deep-fryer"]
+        },
+        {
+            "name":"Roast chicken",
+            "is_published":"1",
+            "meal_type":"dinner",
+            "photo":"rice.jpg",
+            "image":"rice_2.jpg",
+            "ingredients":[{"name":"chicken", "quantity":"200", "units":"g"}, {"name":"mixed seasoning", "quantity":"100", "units":"g"}, {"name":"salt", "quantity":"10", "units":"g"}],
+            "methods":"coat and bake",
+            "tags":["american","european","australian","roatissery","cheap eats"],
+            "equipments":["stove","pan"]
+        },
+        {
+            "name":"chips",
+            "is_published":"1",
+            "meal_type":"dinner",
+            "photo":"rice.jpg",
+            "image":"rice_2.jpg",
+            "ingredients":[{"name":"potato", "quantity":"200", "units":"g"}, {"name":"oil", "quantity":"100", "units":"g"}, {"name":"salt", "quantity":"10", "units":"g"}],
+            "methods":"double fry and serve",
+            "tags":["american","european","australian","pub","cheap eats"],
+            "equipments":["stove","deep-fryer"]
+        },
+        {
+            "name":"Orange juice",
+            "is_published":"1",
+            "meal_type":"drink",
+            "photo":"rice.jpg",
+            "image":"rice_2.jpg",
+            "ingredients":[{"name":"oranges", "quantity":"200", "units":"g"}],
+            "methods":"squeeze and serve",
+            "tags":["american","european","australian","vegan","vegetarian","cheap eats","fruity"],
+            "equipments":["blender"]
+        },
+        {
+            "name":"Apple juice",
+            "is_published":"1",
+            "meal_type":"drink",
+            "photo":"rice.jpg",
+            "image":"rice_2.jpg",
+            "ingredients":[{"name":"apple", "quantity":"200", "units":"g"}],
+            "methods":"crush, blend and serve",
+            "tags":["american","european","australian","vegan","vegetarian","cheap eats","fruity"],
+            "equipments":["blender"]
+        },
+        {
+            "name":"Pineapple juice",
+            "is_published":"1",
+            "meal_type":"drink",
+            "photo":"rice.jpg",
+            "image":"rice_2.jpg",
+            "ingredients":[{"name":"pineapples", "quantity":"200", "units":"g"}],
+            "methods":"peel the pineapples, then crush, blend and serve",
+            "tags":["american","european","australian","vegan","vegetarian","cheap eats","fruity"],
+            "equipments":["blender"]
+        }
+    ]
+}

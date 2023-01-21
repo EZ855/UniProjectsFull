@@ -1,0 +1,30 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    background-color: #EE5837;
+    width: 25%;
+    height: 25vh;
+    position: sticky;
+    top: 100px;
+  }
+
+  .side_button {
+    background-color: #EE5837; /* Green */
+    border: 2px solid black;
+    border-radius: 30px;
+    color: black;
+    padding: 12px 25px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+  }
+  
+  .side_button:hover {
+    background-color: white;
+    color:#EE5837;
+  }
