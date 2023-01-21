@@ -1,0 +1,22 @@
+{
+    "entities": [
+        {
+            "type" : "player",
+            "x" : 2,
+            "y" : 2
+        }, {
+            "type" : "invisibility_potion",
+            "x" : 3,
+            "y" : 2
+        }, {
+            "type" : "assassin",
+            "x" : 6,
+            "y" : 2
+        }, {
+            "type" : "exit",
+            "x" : 6,
+            "y" : 1
+        }
+    ],
+        "goal-condition": {"goal": "exit"}
+}
