@@ -1,0 +1,117 @@
+import pytest
+import requests
+import json
+from src import config
+from src.error import InputError
+from src.error import AccessError
+
+@pytest.fixture
+def clear():
+    requests.delete(config.url + 'clear/v1')
+  
+def test_invalid_channel(clear):
+    register_info = {'email':'monty@mail.valid' , 'password': 'password', 'name_first': 'monty', 'name_last': 'python'}
+    reg_response = requests.post(config.url + 'auth/register/v2', json = register_info) # registering user
+    reg_response_data = reg_response.json()
+    token = reg_response_data['token']
+    info = {'token': token,'channel_id': 1, 'start': 0}
+    resp = requests.get(config.url + 'channel/messages/v2', params = info)
+    assert resp.status_code == InputError.code
+
+def test_invalid_user_access(clear):
+    register_info = {'email':'monty@mail.valid' , 'password': 'password', 'name_first': 'monty', 'name_last': 'python'}
+    reg_response = requests.post(config.url + 'auth/register/v2', json = register_info) # registering user
+    reg_response_data = reg_response.json()
+    token = reg_response_data['token']
+    
+    register_info2 = {'email':'monty2@mail.valid' , 'password': 'password2', 'name_first': 'monty2', 'name_last': 'python2'}
+    reg_response2 = requests.post(config.url + 'auth/register/v2', json = register_info2) # registering user
+    reg_response_data2 = reg_response2.json()
+    token2 = reg_response_data2['token']
+ 
+    channel_info = {'token': token, 'name': "temp_name", 'is_public': True}
+    ch_response = requests.post(config.url + 'channels/create/v2', json = channel_info)
+    ch_response_data = ch_response.json()
+    channel_id = ch_response_data['channel_id']
+    
+    
+    info = {'token': token2,'channel_id': channel_id, 'start': 0}
+    resp = requests.get(config.url + 'channel/messages/v2', params = info)
+    assert resp.status_code == AccessError.code
+
+def test_functionality(clear):
+    register_info = {'email':'monty@mail.valid' , 'password': 'password', 'name_first': 'monty', 'name_last': 'python'}
+    reg_response = requests.post(config.url + 'auth/register/v2', json = register_info) # registering user
+    reg_response_data = reg_response.json()
+    token = reg_response_data['token']
+ 
+    channel_info = {'token': token, 'name': "temp_name", 'is_public': True}
+    ch_response = requests.post(config.url + 'channels/create/v2', json = channel_info)
+    ch_response_data = ch_response.json()
+    channel_id = ch_response_data['channel_id']
+    
+    channel_info = {'token': token, 'name': "temp_name2", 'is_public': True}
+    ch_response = requests.post(config.url + 'channels/create/v2', json = channel_info)
+    ch_response_data = ch_response.json()
+    channel_id = ch_response_data['channel_id']
+    
+    
+    info = {'token': token,'channel_id': channel_id, 'start': 0}
+    resp = requests.get(config.url + 'channel/messages/v2', params = info)
+    assert resp.status_code == 200
+    
+def test_invalid_start(clear):
+    register_info = {'email':'monty@mail.valid' , 'password': 'password', 'name_first': 'monty', 'name_last': 'python'}
+    reg_response = requests.post(config.url + 'auth/register/v2', json = register_info) # registering user
+    reg_response_data = reg_response.json()
+    token = reg_response_data['token']
+ 
+    channel_info = {'token': token, 'name': "temp_name", 'is_public': True}
+    ch_response = requests.post(config.url + 'channels/create/v2', json = channel_info)
+    ch_response_data = ch_response.json()
+    channel_id = ch_response_data['channel_id']
+    
+    
+    info = {'token': token,'channel_id': channel_id, 'start': 10}
+    resp = requests.get(config.url + 'channel/messages/v2', params = info)
+    assert resp.status_code == InputError.code
+
+def test_above_50_messages(clear):
+    register_info = {'email':'monty@mail.valid' , 'password': 'password', 'name_first': 'monty', 'name_last': 'python'}
+    reg_response = requests.post(config.url + 'auth/register/v2', json = register_info) # registering user
+    reg_response_data = reg_response.json()
+    token = reg_response_data['token']
+ 
+    channel_info = {'token': token, 'name': "temp_name", 'is_public': True}
+    ch_response = requests.post(config.url + 'channels/create/v2', json = channel_info)
+    ch_response_data = ch_response.json()
+    channel_id = ch_response_data['channel_id']
+    
+    for x in range(52):
+        send_info = {'token': token,'channel_id': channel_id, 'message': "Hello World"}
+        requests.post(config.url + 'message/send/v1', json = send_info)
+        if x == 53:
+            break
+    
+    msg_info = {'token': token,'channel_id': channel_id, 'start': 0}
+    msgs_json = requests.get(config.url + 'channel/messages/v2', params = msg_info)
+    msgs = msgs_json.json()
+    assert msgs['start'] == 0
+    assert msgs['end'] == 50
+    assert msgs['messages'][0]['message'] == "Hello World"
+    assert msgs['messages'][1]['message'] == "Hello World"
+    assert msgs['messages'][49]['message'] == "Hello World"
+    assert msgs_json.status_code == 200
+    
+    msg_info = {'token': token,'channel_id': channel_id, 'start': 50}
+    msgs_json = requests.get(config.url + 'channel/messages/v2', params = msg_info)
+    msgs = msgs_json.json()
+    assert msgs['start'] == 50
+    assert msgs['end'] == -1
+    assert msgs['messages'][0]['message'] == "Hello World"
+    assert msgs['messages'][1]['message'] == "Hello World"
+    assert msgs_json.status_code == 200
+    
+    
+    
+    
