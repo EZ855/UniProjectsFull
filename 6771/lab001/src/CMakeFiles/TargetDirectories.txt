@@ -1,0 +1,5 @@
+/home/evan/COMP6771/lab001/src/CMakeFiles/rebuild_cache.dir
+/home/evan/COMP6771/lab001/src/CMakeFiles/main.dir
+/home/evan/COMP6771/lab001/src/CMakeFiles/edit_cache.dir
+/home/evan/COMP6771/lab001/src/CMakeFiles/test.dir
+/home/evan/COMP6771/lab001/src/CMakeFiles/catch2_main.dir

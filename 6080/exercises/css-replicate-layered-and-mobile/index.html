@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .grey-box {
+            display: flex;
+            flex-direction: column;
+            background-color: #f2f2f2;
+            width: 375px;
+            margin-left: 25px;
+            margin-top: -25px;
+            padding: 30px 20px;
+            z-index: 2;
+            position: absolute;
+        }
+        body::before {
+            content: '';
+            background-image: url('page.PNG');
+            background-size: cover;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            opacity: 0;
+            height: 883px;
+            width: 1219px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <img src="assets/image.jpg" width="450" alt="all inclusive image of unsw students">
+        </div>
+        <div class="grey-box">
+            <h2>Staff</h2>
+            <p>Interested in promoting daslkdjfl;asdjfl;kasdjfl;kasjdfl;kasjdfl;k<b>yes</b></p>
+            <a style="font-weight: bold; align-self: baseline;">Learn more ></a>
+        </div>
+    </div>
+    
+</body>
+</html>

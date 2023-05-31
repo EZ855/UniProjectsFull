@@ -1,0 +1,43 @@
+.side-bar {
+    width: 80px;
+    height: 100%;
+    position: fixed;
+    background-color: rgb(200, 200, 220);
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 auto;
+}
+.side-bar-logo {
+    align-self: center;
+    height: 54px;
+    width: 54px;
+    margin-top: 8px 8px;
+    margin-bottom: 8px;
+}
+.side-bar-mobile-links {
+    display: none;
+    font-size: 0.7em;
+}
+@media (max-width: 1400px) {
+    .side-bar {
+        width: 60px;
+    }
+    .side-bar-mobile-links {
+        display: block;
+    }
+    .side-bar-desktop-links {
+        display: none;
+    }
+    .side-bar-logo {
+        height: 40px;
+        width: 40px;
+    }
+}
+@media (max-width: 800px) {
+    .side-bar {
+        width: 30px;
+    }
+    .side-bar-logo {
+        display: none;
+    }
+}

@@ -1,0 +1,28 @@
+.wc-left {
+    background-color: #ccc;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wc-right {
+    background-color: #999;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.wc-right-half {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+}
+.wc-right-box {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #999;
+}
+#wc-text {
+    display: none;
+}

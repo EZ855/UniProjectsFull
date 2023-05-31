@@ -1,0 +1,276 @@
+/* base styles, feel free to edit */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial;
+}
+
+#main {
+    height: calc(100% - 40px);
+    z-index: 5;
+}
+
+/* Login page styling */
+
+#login-page {
+    height: 100%;
+    display: flex; /* CHANGE HERE */
+    align-items: center;
+    justify-content: center;
+    background-image: url(../assets/background.jpg);
+    overflow-y: scroll;
+}
+
+#login-page-container {
+    width: 500px;
+    height: 420px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0 1px 10px 1px lightgrey;
+}
+
+h1 {
+    font-weight: bold;
+    font-style: italic;
+}
+
+h1:hover {
+    color: #B1C1E3;
+    transition: color 0.5s ease;
+}
+
+#emoji {
+    font-style: normal;
+}
+
+hr {
+    color: grey;
+    width: 90%;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#register-form {
+    display: none;
+    flex-direction: column;
+}
+
+#login-question {
+    margin-bottom: 10px;
+}
+
+.login-page-button {
+    border-radius: 5px;
+    background-color: white;
+    border: grey 1px solid;
+    padding: 8px;
+}
+
+.login-page-button:hover {
+    background-color: #B1C1E3;
+}
+
+/* Home page styling */
+
+#home-page {
+    display: none;
+}
+
+#error-modal {
+    display: none;
+    z-index: 2;
+}
+#add-job-modal {
+    display: none;
+    z-index: 1;
+}
+
+#profile-modal {
+    display: none;
+    z-index: 1;
+}
+
+#user-profile-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-profile-body-option {
+    display: flex;
+    flex-direction: column;
+}
+
+#password-update-message {
+    font-size: 8pt;
+}
+
+#top-bar {
+    width: 100%;
+    height: 80px;
+    box-shadow: 0px 1px 10px 1px lightgrey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#top-bar:hover {
+    background-color: #B1C1E3;
+    transition: background-color 1s ease;
+}
+
+.top-bar-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-bar-icons:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+
+.icons {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+#job-feed-container {
+    padding: 20px;
+}
+
+#user-profile-page {
+    display: none;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+#user-profile-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+#user-profile-name {
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+#user-profile-email {
+    font-style: italic;
+}
+
+.user-profile-button {
+    border: solid 1px #B1C1E3;
+    background-color: #B1C1E3;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#user-profile-edit {
+    display: none;
+}
+
+.user-profile-button:hover {
+    opacity: 70%;
+}
+
+#job-modal {
+    display: none;
+    z-index: 1;
+}
+
+#job-modal-body {
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+#watch-user-modal {
+    display: none;
+    z-index: 1;
+}
+
+#watch-user-modal-body {
+    display: flex;
+    flex-direction: column;
+}
+
+#add-job-modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-job-modal-option {
+    display: flex;
+    flex-direction: column;
+}
+
+#notification-modal {
+    display: none;
+}
+
+/* This was adapted from https://css-tricks.com/timer-bars-in-css-with-custom-properties/
+   Some of the styles were changed, however. */
+.round-time-bar {
+    margin: 0px;
+    overflow: hidden;
+    height: 5px;
+    animation: roundtime calc(var(--duration) * 1s) linear forwards;
+    transform-origin: left center;
+    background: #B1C1E3;
+    border-radius: 40px;
+}
+
+#notification-header {
+    padding-top: 5px;
+}
+
+@keyframes roundtime {
+    to {
+        /* More performant than `width` */
+        transform: scaleX(0);
+    }
+}
+
+#comment-box {
+    width: 100%;
+}
+
+#footer {
+    color: white;
+    background-color: #B1C1E3;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+}
+
+@keyframes FIRE {
+    0%   {color:red;}
+    50%  {color:rgb(255, 136, 0);}
+    100% {color:red;}
+    }
+
+.animation {
+    animation-name: FIRE;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}

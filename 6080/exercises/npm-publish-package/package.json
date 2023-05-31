@@ -1,0 +1,11 @@
+{
+  "name": "npm-publish-package",
+  "version": "0.0.1",
+  "description": "Publishing an `npm` package",
+  "main": "index.js",
+  "scripts": {
+    "start": "node solution/index.js"
+  },
+  "author": "Evan",
+  "license": "ISC"
+}

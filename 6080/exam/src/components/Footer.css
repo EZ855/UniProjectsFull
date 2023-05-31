@@ -1,0 +1,21 @@
+.footer {
+    height: 60px;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 80px;
+    flex: 0 1 auto;
+}
+@media (max-width: 1400px) {
+    .footer {
+        left: 60px;
+    }
+}
+@media (max-width: 800px) {
+    .footer {
+        left: 30px;
+    }
+}

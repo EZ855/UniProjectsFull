@@ -1,0 +1,12 @@
+.frogger-grid {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+    width: 1000px;
+    height: 1000px;
+    background-color: red;
+}
+.cell {
+    width: 10px;
+    height: 10px;
+}

@@ -1,0 +1,33 @@
+.dashboard {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+.dashboard-main-body {
+    display: flex;
+    position: relative;
+    left: 80px;
+    width: calc(100% - 80px);
+    height: calc(100% - 60px);
+    height: 1000px;
+}
+.centre {
+    justify-content: center;
+    align-items: center;
+}
+.dashboard-main-body-letsgo {
+    color: red;
+    font-size: 4em;
+}
+@media (max-width: 1400px) {
+    .dashboard-main-body {
+        left: 60px;
+        width: calc(100% - 60px);
+    }
+}
+@media (max-width: 800px) {
+    .dashboard-main-body {
+        left: 30px;
+        width: calc(100% - 30px);
+    }
+}

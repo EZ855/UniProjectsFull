@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="user-form">
+        <table>
+            <tr>
+                <td><h1>Street Name</h1></td>
+                <td><input type="text" name="street-name" id="street-name"></input></td>
+            </tr>
+            <tr>
+                <td><h1>Suburb</h1></td>
+                <td><input type="text" name="suburb" id="suburb"></input></td>
+            </tr>
+            <tr>
+                <td><h1>Postcode</h1></td>
+                <td><input type="number" name="postcode" id="postcode"></input></td>
+            </tr>
+            <tr>
+                <td><h1>Date of birth</h1></td>
+                <td><input type="text" name="dob" id="dob"></input></td>
+            </tr>
+            <tr>
+                <td><h1>Building Type</h1></td>
+                <td>
+                    <select name="building-type" id="building-type">
+                        <option value="apartment">Apartment</option>
+                        <option value="house">House</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><h1>Features</h1></td>
+                <td>
+                    <label><input type="checkbox" id="heating" name="heating" value="heating">heating</label></br>
+                    <label><input type="checkbox" id="air-con" name="air-con" value="air-con">air-con</label></br>
+                    <label><input type="checkbox" id="pool" name="pool" value="pool">pool</label></br>
+                    <label><input type="checkbox" id="sandpit" name="sandpit" value="sandpit">sandpit</label></br>
+                    <button id="select-all" type="button" style="display: inline;"> select all </button>
+                    <button id="deselect-all" type="button" style="display: none;"> deselect all </button>
+                </td>
+            </tr>
+        </table>
+        <button name="reset" type="reset">Reset</button>
+        <textarea name="text-area" id="text-area" readonly style="width: 200px; height: 200px;"></textarea>
+    </form>
+
+    <script type="text/javascript" src="mywork.js"></script>
+
+</body>
+</html>

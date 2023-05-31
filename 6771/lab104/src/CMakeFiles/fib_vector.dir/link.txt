@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfib_vector.a  CMakeFiles/fib_vector.dir/fib_vector.cpp.o
+/usr/bin/ranlib libfib_vector.a

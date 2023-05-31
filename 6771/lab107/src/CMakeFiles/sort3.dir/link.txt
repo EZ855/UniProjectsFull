@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsort3.a  CMakeFiles/sort3.dir/sort3.cpp.o
+/usr/bin/ranlib libsort3.a

@@ -1,0 +1,14 @@
+{
+  "name": "brother",
+  "version": "1.0.0",
+  "description": "Make a new NPM package in the `work` folder.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "momentjs": "^2.0.0"
+  }
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<div id="dogname"></div>
+		<script type="text/javascript">
+		const data = new Promise((resolve, reject)=> {
+			fetch('http://www.cse.unsw.edu.au/~cs6080/raw/data/doggo.txt')
+			.then(res=>res.json())
+			.then(resolve)
+			.catch(err=>console.log(err))
+		}) 
+		data.then((result)=>{document.getElementById('dogname').innerText = result;})
+		</script>
+	</body>
+</html>

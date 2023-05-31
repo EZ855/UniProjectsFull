@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/evan/COMP6771/lab102/src",
+  "command": "/usr/bin/c++    -g   -Wall -Wextra -Werror -pedantic-errors -Wconversion -Wsign-conversion -Wdouble-promotion -Wcast-align -Wformat=2 -Wuninitialized -Wnull-dereference -Wnon-virtual-dtor -Woverloaded-virtual -Wdeprecated-copy-dtor -Wold-style-cast -Wzero-as-null-pointer-constant -Wsuggest-override -fstack-protector-strong -std=c++2a -o CMakeFiles/add_numbers.dir/add_numbers.cpp.o -c /home/evan/COMP6771/lab102/src/add_numbers.cpp",
+  "file": "/home/evan/COMP6771/lab102/src/add_numbers.cpp"
+},
+{
+  "directory": "/home/evan/COMP6771/lab102/src",
+  "command": "/usr/bin/c++   -I/home/evan/COMP6771/lab102/lib  -g   -Wall -Wextra -Werror -pedantic-errors -Wconversion -Wsign-conversion -Wdouble-promotion -Wcast-align -Wformat=2 -Wuninitialized -Wnull-dereference -Wnon-virtual-dtor -Woverloaded-virtual -Wdeprecated-copy-dtor -Wold-style-cast -Wzero-as-null-pointer-constant -Wsuggest-override -fstack-protector-strong -std=c++2a -o CMakeFiles/catch2_main.dir/lib/catch2_main.cpp.o -c /home/evan/COMP6771/lab102/lib/catch2_main.cpp",
+  "file": "/home/evan/COMP6771/lab102/lib/catch2_main.cpp"
+}
+]

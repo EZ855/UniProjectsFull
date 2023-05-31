@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/sort3_test_exe.dir/sort3.test.cpp.o  -o sort3_test_exe  libcatch2_main.a libsort3.a 

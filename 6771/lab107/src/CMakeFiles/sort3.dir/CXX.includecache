@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/evan/COMP6771/lab107/src/sort3.cpp
+sort3.h
+/home/evan/COMP6771/lab107/src/sort3.h
+vector
+-
+
+/home/evan/COMP6771/lab107/src/sort3.h
+string
+-
+

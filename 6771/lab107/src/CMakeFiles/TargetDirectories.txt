@@ -1,0 +1,6 @@
+/home/evan/COMP6771/lab107/src/CMakeFiles/rebuild_cache.dir
+/home/evan/COMP6771/lab107/src/CMakeFiles/sort3_test_exe.dir
+/home/evan/COMP6771/lab107/src/CMakeFiles/sort3.dir
+/home/evan/COMP6771/lab107/src/CMakeFiles/edit_cache.dir
+/home/evan/COMP6771/lab107/src/CMakeFiles/test.dir
+/home/evan/COMP6771/lab107/src/CMakeFiles/catch2_main.dir
